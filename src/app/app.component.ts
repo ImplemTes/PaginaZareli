@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mi-app';
+   // Variable que controla la apertura del menú
+   isMenuOpen: boolean = false;
+     // Método para alternar la visibilidad del menú
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

@@ -5,23 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script> <!-- Usamos AlpineJS para interactividad -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> <!-- Tailwind CSS -->
 </head>
 
 <body>
-<header>
-  <div class="bg-blue-500 text-white p-4">
-    <h1 class="text-3xl">¡Tailwind está funcionando!</h1>
+  <header class="bg-white shadow-md p-4 flex justify-between items-center">
+    <!-- Logo -->
+    <img src="../assets/img/logo.jpeg" height="100px" width="250px" alt="Logo">
+    
+    <!-- Menú hamburguesa (solo en pantallas pequeñas) -->
+    <div class="lg:hidden flex items-center">
+      <!-- Icono hamburguesa -->
+      <button (click)="toggleMenu()" class="text-gray-800 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Menú desplegable (solo en pantallas grandes) -->
+    <div class="lg:flex hidden items-center space-x-4">
+      <a href="#" class="text-gray-700 hover:bg-gray-100 px-4 py-2">Inicio</a>
+      <a href="#" class="text-gray-700 hover:bg-gray-100 px-4 py-2">Opción 2</a>
+      <a href="#" class="text-gray-700 hover:bg-gray-100 px-4 py-2">Opción 3</a>
+      <a href="#" class="text-gray-700 hover:bg-gray-100 px-4 py-2">Opción 4</a>
+      <a href="#" class="text-gray-700 hover:bg-gray-100 px-4 py-2">Opción 5</a>
+    </div>
+  </header>
+  
+  <!-- Menú hamburguesa (en pantallas pequeñas) -->
+  <div *ngIf="isMenuOpen" class="lg:hidden fixed inset-0 bg-white bg-opacity-80 z-10 p-4 space-y-4">
+    <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Opción 1</a>
+    <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Opción 2</a>
+    <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Opción 3</a>
+    <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Opción 4</a>
+    <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Opción 5</a>
   </div>
-</header>
-<nav>
 
-</nav>
-<section>
-
-</section>
-
-<footer>
-
-</footer>
+  <nav></nav>
+  <section></section>
+  <footer></footer>
 </body>
+
 </html>
