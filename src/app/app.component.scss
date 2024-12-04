@@ -1,24 +1,11 @@
 /* Espaciado y alineación */
-.bg-gray-900 {
-    background-color: #f52a2a; /* Color de fondo oscuro */
+#lineaR{
+    background-color: #fc2727; /* Color de fondo oscuro */
     color: #ffffff; /* Color de texto blanco */
     padding: 1rem 2rem; /* Espacio entre el enlace y los demás elementos */
   }
   
   
-  nav a {
-    transition: all 0.3s ease-in-out;
-  }
-  
-  nav a:hover {
-    color: #ff0800; /* Amarillo más brillante en hover */
-  }
-  
-  /* Dropdown estilo */
-  .relative .group-hover\:block {
-    display: none;
-  }
-  
-  .group:hover .group-hover\:block {
-    display: block;
+  #mobile-menu {
+    transition: transform 0.3s ease;
   }

@@ -16,38 +16,47 @@
 
 <body>
   <!-- Línea roja con información -->
-  <div class="bg-gray-900 text-white py-2">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
- 
-      <!-- Información de contacto -->
-      <div class="flex items-center space-x-4">
-        <span class="flex items-center">
-          <i class="fas fa-map-marker-alt text-white mr-2"></i> Camino real, Trujillo
-        </span>
-        <span class="flex items-center">
-          <i class="fas fa-phone-alt text-white mr-2"></i> (+51) 917700319
-        </span>
-        <span class="flex items-center">
-          <i class="fas fa-envelope text-white mr-2"></i> zreliadfdfdf.com
-        </span>
-      </div>
-      <!-- Redes sociales -->
-      <div class="flex space-x-4">
-        <a href="#" class="text-white hover:text-white"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="text-white hover:text-white"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-white hover:text-white"><i class="fab fa-youtube"></i></a>
-        <a href="#" class="text-white hover:text-white"><i class="fab fa-tiktok"></i></a>
-        <a href="#" class="text-white hover:text-white"><i class="fab fa-linkedin"></i></a>
+  <div class="  text-white py-3" id="lineaR">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Información de contacto y redes sociales -->
+      <div class="flex justify-between items-center space-x-4">
+
+        <!-- Información de contacto (oculta en pantallas pequeñas) -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <span class="flex items-center">
+            <i class="fas fa-map-marker-alt text-white mr-4"></i> Camino real, Trujillo
+          </span>
+          <span class="flex items-center">
+            <i class="fas fa-phone-alt text-white mr-4"></i> (+51) 917700319
+          </span>
+          <span class="flex items-center">
+            <i class="fas fa-envelope text-white mr-4"></i> zreliadfdfdf.com
+          </span>
+        </div>
+
+        <!-- Redes sociales (centradas en pantallas pequeñas y alineadas a la izquierda en pantallas grandes) -->
+        <div class="flex justify-center lg:justify-start space-x-4 w-full lg:w-auto">
+          <a href="#" class="text-white hover:text-white mr-2"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-white hover:text-white mr-4"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white hover:text-white mr-4"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="text-white hover:text-white mr-4"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="text-white hover:text-white mr-4"><i class="fab fa-linkedin"></i></a>
+        </div>
       </div>
     </div>
   </div>
+
+
   <!-- Cabecera principal -->
   <header class="bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
-      <!-- Logo -->
-      <div class="flex items-center">
+
+      <!-- Logo (centrado y con margen en pantallas grandes) -->
+      <div class="flex items-center flex-shrink-0">
         <img src="../assets/img/logo.jpeg" alt="Logo" class="h-16 w-auto">
       </div>
+
       <!-- Menú de navegación para escritorio -->
       <nav class="hidden md:flex space-x-8">
         <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Inicio</a>
@@ -62,25 +71,81 @@
         <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Nuestra Flota</a>
         <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Contáctenos</a>
       </nav>
-        <!-- Botón menú móvil -->
-        <button id="menu-button" class="md:hidden">
-          <i class="fas fa-bars text-gray-900 text-2xl"></i>
-        </button>
+
+      <!-- Botón menú móvil -->
+      <button (click)="toggleMenu()" class="md:hidden text-gray-900 text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+
     </div>
-    <!-- Menú móvil -->
+
+    <!-- Menú móvil (Desplegable) -->
     <div *ngIf="isMenuOpen" id="mobile-menu"
-      class="fixed inset-0 bg-gray-900 bg-opacity-90 z-50 flex flex-col items-center justify-center">
-      <nav class="text-center">
-        <a href="#" class="block text-gray-100 hover:text-gray-400 text-lg py-2">Home</a>
-        <a href="#" class="block text-gray-100 hover:text-gray-400 text-lg py-2">Services</a>
-        <a href="#" class="block text-gray-100 hover:text-gray-400 text-lg py-2">Contacto</a>
+      class="fixed inset-x-0 top-0 bg-gray-900 bg-opacity-90 z-50 flex flex-col items-center max-h-[calc(100vh-4rem)] overflow-y-auto py-4">
+      <nav class="text-center space-y-4">
+        <a href="#" class="block text-gray-100 hover:text-gray-400 text-lg py-2">Inicio</a>
+        <a href="#" class="block text-gray-100 hover:text-gray-400 text-lg py-2">Nosotros</a>
+        <a href="#" class="block text-gray-100 hover:text-gray-400 text-lg py-2">Productos</a>
+        <a href="#" class="block text-gray-100 hover:text-gray-400 text-lg py-2">Nuestra Flota</a>
+        <a href="#" class="block text-gray-100 hover:text-gray-400 text-lg py-2">Contáctenos</a>
       </nav>
       <button class="mt-6 text-gray-100 hover:text-red-400" (click)="toggleMenu()">Cerrar</button>
     </div>
   </header>
 
-  <section>
+  <!-- Cabecera principal 2 -->
+  <nav class="bg-white">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 hover:bg-red-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex shrink-0 items-center">
+            <img class="h-20 w-auto" src="../assets/img/logo.jpeg" alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <a href="#"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-red-500 hover:text-white">Inicio</a>
+              <a href="#"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-red-500 hover:text-white">Nosotros</a>
+              <a href="#"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-red-500 hover:text-white">Productos</a>
+            </div>
+          </div>
+        </div>
 
+      </div>
+    </div>
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Inicio</a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Nosotros</a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Productos</a>
+      </div>
+    </div>
+  </nav>
+  <section>
+    <h1></h1>
   </section>
   <footer>
 

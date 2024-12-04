@@ -9,8 +9,16 @@ export class AppComponent {
   title = 'mi-app';
    // Variable que controla la apertura del menú
    isMenuOpen: boolean = false;
+     // Estado del submenú (Productos)
+  isSubMenuOpen = false;
      // Método para alternar la visibilidad del menú
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+
+  // Función para alternar el estado del submenú
+  toggleSubMenu() {
+    this.isSubMenuOpen = !this.isSubMenuOpen;
   }
 }
