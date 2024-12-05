@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mi-app';
-   // Variable que controla la apertura del menú
-   isMenuOpen: boolean = false;
-     // Estado del submenú (Productos)
-  isSubMenuOpen = false;
-     // Método para alternar la visibilidad del menú
+  isMenuOpen = false; // Estado para el menú móvil
+  isSubmenuOpen = false; // Estado para el submenú "Conta"
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  toggleSubmenu() {
+    this.isSubmenuOpen = !this.isSubmenuOpen;
+  }
 
  
 }
