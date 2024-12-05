@@ -17,8 +17,5 @@ export class AppComponent {
   }
 
 
-  // Función para alternar el estado del submenú
-  toggleSubMenu() {
-    this.isSubMenuOpen = !this.isSubMenuOpen;
-  }
+ 
 }
