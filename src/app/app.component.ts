@@ -7,10 +7,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'mi-app';
-  isMenuOpen = false; // Estado para el menú móvil
-  isSubmenuOpen = false; // Estado para el submenú "Conta"
-
-  // Array con las imágenes
+  isMenuOpen = false;  
+  isSubmenuOpen = false; 
   images = [
     {
       src: '/assets/carrusel/imagen1.jpg'
@@ -25,7 +23,7 @@ export class AppComponent implements OnInit, OnDestroy {
   currentIndex: number = 0;
   interval: any;
 
-  // Se ejecuta cuando el componente se inicializa
+ 
   ngOnInit(): void {
     this.startCarousel();
   }
@@ -33,7 +31,7 @@ export class AppComponent implements OnInit, OnDestroy {
   startCarousel() {
     this.interval = setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
-    }, 6000); // Cambia de imagen cada 5 segundos
+    }, 6000);  
   }
 
   goToNext() {
@@ -58,5 +56,43 @@ export class AppComponent implements OnInit, OnDestroy {
     this.isSubmenuOpen = !this.isSubmenuOpen;
   }
 
+  values = [
+    {
+      title: 'Puntualidad',
+      description:
+        'Nos comprometemos a entregar los materiales de construcción a tiempo, garantizando la satisfacción de nuestros clientes.',
+    },
+    {
+      title: 'Innovación',
+      description:
+        'Incorporamos las últimas tecnologías para optimizar nuestros procesos y mejorar la calidad de nuestros productos.',
+    },
+    {
+      title: 'Calidad',
+      description:
+        'Ofrecemos materiales de la más alta calidad, asegurando durabilidad y fiabilidad en todos nuestros productos.',
+    },
+    {
+      title: 'Seguridad',
+      description:
+        'La seguridad es nuestra prioridad, asegurando un entorno de trabajo seguro tanto para nuestros empleados como para nuestros clientes.',
+    },
+    {
+      title: 'Responsabilidad',
+      description:
+        'Nos comprometemos con la ética y la responsabilidad en cada proyecto, respetando el medio ambiente y cumpliendo nuestras promesas con los clientes.',
+    },
+        {
+      title: 'Compromiso',
+      description:
+        'Compromiso con nuestros clientes, empleados y la sociedad. Nos dedicamos a cumplir nuestras promesas y garantizar que cada proyecto sea realizado con la máxima dedicación.',
+    },
+  ];
 
+  openedIndex: number | null = null;
+
+  toggleAccordion(index: number) {
+    // Si el índice está abierto, lo cerramos, sino lo abrimos
+    this.openedIndex = this.openedIndex === index ? null : index;
+  }
 }

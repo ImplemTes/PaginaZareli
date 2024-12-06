@@ -149,9 +149,7 @@
     </div>
   </nav>
   <section>
-    <!-- Empresa -->
-
-    <!-- Valores -->
+    <!--Carrusel-->
     <div class="relative isolate overflow-hidden bg-gray-900 py-14 sm:py-24 md:py-48 lg:py-64">
       <div class="absolute inset-0 -z-10">
         <img *ngFor="let image of images; let i = index" [src]="image.src" alt="image"
@@ -197,137 +195,214 @@
         </div>
       </div>
     </div>
+
+    <!-- Card Empresa -->
+    <div
+      class=" py-16 flex flex-col md:flex-row bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 rounded-lg p-6 transition-all duration-300 ease-in-out max-w-4xl mx-auto">
+      <!-- Imagen a la izquierda -->
+      <div class="flex-shrink-0 w-full md:w-1/3 mb-4 md:mb-0">
+        <img src="/assets/carrusel/imagen2.jpg" alt="Servicios Generales Gbriel & Zareli SAC"
+          class="object-cover w-full h-[200px] md:h-full rounded-lg">
+      </div>
+
+      <!-- Contenido a la derecha -->
+      <div class="flex-1 md:ml-6">
+        <h3 class="text-3xl font-semibold text-gray-800">Servicios Generales Gbriel & Zareli SAC</h3>
+        <p class="text-lg text-gray-600 mt-2">Empresa peruana líder en la comercialización de productos de materiales de
+          construcción.</p>
+
+        <!-- Sub-card con los años de experiencia -->
+        <div class="mt-6 p-4 border-t-4 border-red-600 bg-gray-50 rounded-lg">
+          <h4 class="text-xl font-semibold text-gray-800">10 años de experiencia</h4>
+        </div>
+      </div>
+    </div>
+
     <!-- Productos -->
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="bg-white py-24 sm:py-4">
-        <div class="mx-auto max-w-2xl text-center">
-          <h5 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Nuestros Valores</h5>
-        </div>
-        <!-- Sección de cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 p-6">
-          <!-- Card 1: Puntualidad -->
-          <div
-            class="flex flex-col items-center bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 rounded-lg p-6 border-4 border-red-600 transition duration-300 ease-in-out h-full">
-            <div
-              class="w-40 h-40 border-6 border-red-600 rounded-full flex justify-center items-center overflow-hidden mb-6">
-              <img src="/assets/carrusel/imagen2.jpg" alt="Puntualidad" class="object-cover w-full h-full">
-            </div>
-            <h3 class="text-2xl font-semibold text-center text-gray-800">Puntualidad</h3>
-            <p class="text-center text-gray-600 mt-2 flex-grow">Nos comprometemos a entregar los materiales de
-              construcción a tiempo, garantizando la satisfacción de nuestros clientes.</p>
-          </div>
+    <div class="bg-red-500 lg:py-4 sm:py-1">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <!-- Título con separación reducida -->
+        <h5 class="text-center text-4xl font-semibold tracking-tight text-white sm:text-5xl mt-6 sm:mt-8">Nuestros
+          Productos</h5>
 
-          <!-- Card 2: Innovación -->
-          <div
-            class="flex flex-col items-center bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 rounded-lg p-6 border-4 border-red-600 transition duration-300 ease-in-out h-full">
-            <div
-              class="w-40 h-40 border-6 border-red-600 rounded-full flex justify-center items-center overflow-hidden mb-6">
-              <img src="/assets/carrusel/imagen2.jpg" alt="Innovación" class="object-cover w-full h-full">
-            </div>
-            <h3 class="text-2xl font-semibold text-center text-gray-800">Innovación</h3>
-            <p class="text-center text-gray-600 mt-2 flex-grow">Incorporamos las últimas tecnologías para optimizar
-              nuestros procesos y mejorar la calidad de nuestros productos.</p>
-          </div>
+        <div
+          class="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-10 sm:pt-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 
-          <!-- Card 3: Calidad -->
-          <div
-            class="flex flex-col items-center bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 rounded-lg p-6 border-4 border-red-600 transition duration-300 ease-in-out h-full">
-            <div
-              class="w-40 h-40 border-6 border-red-600 rounded-full flex justify-center items-center overflow-hidden mb-6">
-              <img src="/assets/carrusel/imagen2.jpg" alt="Calidad" class="object-cover w-full h-full">
-            </div>
-            <h3 class="text-2xl font-semibold text-center text-gray-800">Calidad</h3>
-            <p class="text-center text-gray-600 mt-2 flex-grow">Ofrecemos materiales de la más alta calidad, asegurando
-              durabilidad y fiabilidad en todos nuestros productos.</p>
-          </div>
-        </div>
+          <!-- Producto 1 -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <div class="relative">
+              <img alt="Alambre"
+                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+                class="rounded-lg w-full shadow-lg transform hover:scale-105 transition duration-300">
 
-        <!-- Fila 2: Cards de Seguridad y Responsabilidad -->
-        <div class="flex justify-center items-center p-6">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <!-- Card 1: Seguridad -->
-            <div
-              class="flex flex-col items-center bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 rounded-lg p-6 border-4 border-red-600 transition duration-300 ease-in-out h-full">
-              <div
-                class="w-40 h-40 border-6 border-red-600 rounded-full flex justify-center items-center overflow-hidden mb-6">
-                <img src="/assets/carrusel/imagen2.jpg" alt="Seguridad" class="object-cover w-full h-full">
+              <div id="texto-imagen"
+                class="absolute bottom-4 left-0 right-0 text-center text-4xl font-semibold text-red-500 p-4 rounded-lg">
+                <h3 class="text-2xl font-bold text-red-500 uppercase tracking-wider">Producto 1</h3>
               </div>
-              <h3 class="text-2xl font-semibold text-center text-gray-800">Seguridad</h3>
-              <p class="text-center text-gray-600 mt-2 flex-grow">La seguridad es nuestra prioridad, asegurando un
-                entorno de trabajo seguro tanto para nuestros empleados como para nuestros clientes.</p>
             </div>
+          </article>
 
-            <!-- Card 2: Responsabilidad -->
-            <div
-              class="flex flex-col items-center bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 rounded-lg p-6 border-4 border-red-600 transition duration-300 ease-in-out h-full">
-              <div
-                class="w-40 h-40 border-6 border-red-600 rounded-full flex justify-center items-center overflow-hidden mb-6">
-                <img src="/assets/carrusel/imagen2.jpg" alt="Responsabilidad" class="object-cover w-full h-full">
+          <!-- Producto 2 -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <div class="relative">
+              <img alt="Alambre"
+                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+                class="rounded-lg w-full shadow-lg transform hover:scale-105 transition duration-300">
+
+              <div id="texto-imagen"
+                class="absolute bottom-4 left-0 right-0 text-center text-4xl font-semibold text-red-500 p-4 rounded-lg">
+                <h3 class="text-2xl font-bold text-red-500 uppercase tracking-wider">Producto 2</h3>
               </div>
-              <h3 class="text-2xl font-semibold text-center text-gray-800">Responsabilidad</h3>
-              <p class="text-center text-gray-600 mt-2 flex-grow">Nos comprometemos con la ética y la responsabilidad en
-                cada proyecto, respetando el medio ambiente y cumpliendo nuestras promesas con los clientes.</p>
             </div>
-          </div>
+          </article>
+
+          <!-- Producto 3 -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <div class="relative">
+              <img alt="Alambre"
+                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+                class="rounded-lg w-full shadow-lg transform hover:scale-105 transition duration-300">
+
+              <div id="texto-imagen"
+                class="absolute bottom-4 left-0 right-0 text-center text-4xl font-semibold text-red-500 p-4 rounded-lg">
+                <h3 class="text-2xl font-bold text-red-500 uppercase tracking-wider">Producto 3</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 4 -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <div class="relative">
+              <img alt="Alambre"
+                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+                class="rounded-lg w-full shadow-lg transform hover:scale-105 transition duration-300">
+
+              <div id="texto-imagen"
+                class="absolute bottom-4 left-0 right-0 text-center text-4xl font-semibold text-red-500 p-4 rounded-lg">
+                <h3 class="text-2xl font-bold text-red-500 uppercase tracking-wider">Producto 4</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 5 -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <div class="relative">
+              <img alt="Alambre"
+                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+                class="rounded-lg w-full shadow-lg transform hover:scale-105 transition duration-300">
+
+              <div id="texto-imagen"
+                class="absolute bottom-4 left-0 right-0 text-center text-4xl font-semibold text-red-500 p-4 rounded-lg">
+                <h3 class="text-2xl font-bold text-red-500 uppercase tracking-wider">Producto 5</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Texto adicional y botón -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <div class="group relative">
+              <p class="mt-4 text-lg text-gray-100">
+                Ofrecemos una amplia variedad de productos de alta calidad para satisfacer tus necesidades en
+                construcción.
+              </p>
+              <div class="mt-6 flex justify-center">
+                <a href="#"
+                  class="px-8 py-4 text-black font-semibold bg-white rounded-full shadow-lg hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-red-100 focus:ring-opacity-50 transition duration-300 transform hover:scale-105">
+                  Ver más
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </div>
 
 
-    <div class="bg-white py-24 sm:py-32">
+    <!-- Flota Vehicular -->
+    <div class="bg-white lg:py-4 sm:py-6">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:mx-0">
-          <h5 class="text-center text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Nuestros Productos
-          </h5>
+        <!-- Contenedor de vehiculos -->
+        <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+
+          <!-- Imagen 1 -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <img alt="Imagen 1"
+              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+              class="rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+          </article>
+
+          <!-- Imagen 2 -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <img alt="Imagen 2"
+              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+              class="rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+          </article>
+
+          <!-- Texto con botón -->
+          <article class="flex max-w-xl flex-col items-center justify-center text-center">
+            <div class="group relative">
+              <h3 class="mt-3 text-2xl sm:text-3xl font-semibold text-gray-900 group-hover:text-gray-600">
+                <span class="absolute inset-0"></span>
+                Nuestra flota de vehículos
+              </h3>
+              <!-- Texto adicional -->
+              <p class="mt-4 text-lg text-gray-600">
+                Contamos con una flota moderna y eficiente para satisfacer todas tus necesidades de transporte.</p>
+              <!-- Botón "Ver más" -->
+              <div class="mt-6 flex justify-center">
+                <a href="#"
+                  class="px-8 py-4 text-white font-semibold bg-red-500 rounded-full shadow-lg hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition duration-300 transform hover:scale-105">
+                  Ver más
+                </a>
+              </div>
+            </div>
+          </article>
+
         </div>
-        <div
-          class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          <article class="flex max-w-xl flex-col items-start justify-between">
-            <!-- Imagen con bordes redondeados -->
-            <img alt=""
-              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
-              class="rounded-lg">
+      </div>
+    </div>
 
-            <div class="group relative">
-              <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                <a href="#">
-                  <span class="absolute inset-0"></span>
-                  Cemento
-                </a>
-              </h3>
-            </div>
-          </article>
-          <article class="flex max-w-xl flex-col items-start justify-between">
-            <!-- Imagen con bordes redondeados -->
-            <img alt=""
-              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
-              class="rounded-lg">
+    <!-- Valores con Accordion -->
+    <div class="bg-gray-100 ">
+      <div class="bg-gray-100 sm:py-1  lg:py-4 mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="bg-gray-100 py-24 sm:py-4">
+          <div class="mx-auto max-w-2xl text-center">
+            <h5 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Nuestros Valores</h5>
+          </div>
 
-            <div class="group relative">
-              <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                <a href="#">
-                  <span class="absolute inset-0"></span>
-                  Alambre
-                </a>
-              </h3>
+          <!-- Sección de Accordion -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 p-6">
+            <div *ngFor="let value of values; let i = index">
+              <div class="flex flex-col items-center">
+                <!-- Botón Accordion con ícono dentro del mismo -->
+                <div
+                  class="w-full bg-white rounded-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-xl shadow-lg">
+                  <button (click)="toggleAccordion(i)"
+                    class="flex items-center justify-between w-full p-6 text-left text-gray-800 hover:bg-gray-200 focus:outline-none rounded-lg">
+                    <h3 class="text-2xl font-semibold">{{ value.title }}</h3>
+                    <!-- Ícono de flecha que cambia dependiendo del estado del Accordion -->
+                    <span *ngIf="openedIndex === i; else downArrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-180" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </span>
+                    <ng-template #downArrow>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7 7-7-7">
+                        </path>
+                      </svg>
+                    </ng-template>
+                  </button>
+                  <!-- Contenido del Accordion -->
+                  <div *ngIf="openedIndex === i" class="p-4 text-gray-600 bg-gray-50 rounded-b-lg">
+                    <p>{{ value.description }}</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </article>
-          <article class="flex max-w-xl flex-col items-start justify-between">
-            <!-- Imagen con bordes redondeados -->
-            <img alt=""
-              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
-              class="rounded-lg">
-
-            <div class="group relative">
-              <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                <a href="#">
-                  <span class="absolute inset-0"></span>
-                  Alambre
-                </a>
-              </h3>
-            </div>
-          </article>
-          <!-- More posts... -->
+          </div>
         </div>
       </div>
     </div>
