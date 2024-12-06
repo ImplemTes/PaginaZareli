@@ -15,211 +15,308 @@
 </head>
 
 <body>
- 
-    <!-- Línea roja con información -->
-    <div class="text-white py-3" id="lineaR">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- Información de contacto y redes sociales -->
-        <div class="flex justify-between items-center space-x-4">
+  <!-- Línea roja con información -->
+  <div class="text-white py-3" id="lineaR">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <!-- Información de contacto (oculta en pantallas pequeñas) -->
-          <div class="hidden lg:flex items-center space-x-4">
-            <span class="flex items-center">
-              <i class="fas fa-map-marker-alt text-white mr-4"></i> Camino real, Trujillo
-            </span>
-            <span class="flex items-center">
-              <i class="fas fa-phone-alt text-white mr-4"></i> (+51) 917700319
-            </span>
-            <span class="flex items-center">
-              <i class="fas fa-envelope text-white mr-4"></i> zreliadfdfdf.com
-            </span>
-          </div>
+      <!-- Información de contacto y redes sociales -->
+      <div class="flex justify-between items-center space-x-4">
 
-          <!-- Redes sociales (centradas en pantallas pequeñas y alineadas a la izquierda en pantallas grandes) -->
-          <div class="flex justify-center lg:justify-start space-x-4 w-full lg:w-auto">
-            <a href="#"
-              class="text-white border-2 border-transparent hover:border-white hover:bg-red-800 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#"
-              class="text-white border-2 border-transparent hover:border-white hover:bg-red-800 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#"
-              class="text-white border-2 border-transparent hover:border-white hover:bg-red-800 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="#"
-              class="text-white border-2 border-transparent hover:border-white hover:bg-red-800 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
-              <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="#"
-              class="text-white border-2 border-transparent hover:border-white hover:bg-red-800 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
-              <i class="fab fa-linkedin"></i>
-            </a>
+        <!-- Información de contacto (oculta en pantallas pequeñas) -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <span class="flex items-center">
+            <i class="fas fa-map-marker-alt text-white mr-4"></i> Camino real, Trujillo
+          </span>
+          <span class="flex items-center">
+            <i class="fas fa-phone-alt text-white mr-4"></i> (+51) 917700319
+          </span>
+          <span class="flex items-center">
+            <i class="fas fa-envelope text-white mr-4"></i> zreliadfdfdf.com
+          </span>
+        </div>
+
+        <!-- Redes sociales (centradas en pantallas pequeñas y alineadas a la izquierda en pantallas grandes) -->
+        <div class="flex justify-center lg:justify-start space-x-4 w-full lg:w-auto">
+          <a href="#"
+            class="text-white border-2 border-transparent hover:border-white hover:bg-red-800 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#"
+            class="text-white border-2 border-transparent hover:border-white hover:bg-red-800 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#"
+            class="text-white border-2 border-transparent hover:border-white hover:bg-red-800 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#"
+            class="text-white border-2 border-transparent hover:border-white hover:bg-red-800 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="#"
+            class="text-white border-2 border-transparent hover:border-white hover:bg-red-800 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="bg-white py-3">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <!-- Botón del menú móvil -->
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <button type="button" (click)="toggleMenu()"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 hover:bg-red-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" [attr.aria-expanded]="isMenuOpen.toString()">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <svg *ngIf="!isMenuOpen" class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg *ngIf="isMenuOpen" class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Logo: centrado en pantallas pequeñas -->
+        <div class="flex flex-1 items-center justify-center sm:justify-start">
+          <img class="h-20 w-auto" src="../assets/img/logo.jpeg" alt="Your Company">
+        </div>
+
+        <!-- Menú de navegación: solo visible en pantallas grandes -->
+        <div class="hidden sm:flex sm:ml-auto sm:block py-5">
+          <div class="flex space-x-10">
+            <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Inicio</a>
+            <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Nosotros</a>
+            <!-- Menú Productos -->
+            <div class="relative group">
+              <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Productos</a>
+              <div
+                class="absolute bg-white shadow-lg rounded-md mt-2 hidden group-hover:block group-focus-within:block w-max z-50">
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-red-500">Carros</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-red-500">Construcción</a>
+              </div>
+            </div>
+            <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Nuestra Flota</a>
+            <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Contáctenos</a>
           </div>
         </div>
       </div>
     </div>
-    <nav class="bg-white py-3">
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-          <!-- Botón del menú móvil -->
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <button type="button" (click)="toggleMenu()"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 hover:bg-red-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu" [attr.aria-expanded]="isMenuOpen.toString()">
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
-              <svg *ngIf="!isMenuOpen" class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-              <svg *ngIf="isMenuOpen" class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
 
-          <!-- Logo: centrado en pantallas pequeñas -->
-          <div class="flex flex-1 items-center justify-center sm:justify-start">
-            <img class="h-20 w-auto" src="../assets/img/logo.jpeg" alt="Your Company">
-          </div>
+    <!-- Menú móvil (pantallas pequeñas) -->
+    <div class="sm:hidden" [class.hidden]="!isMenuOpen" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Inicio</a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Nosotros</a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Productos</a>
+        <!-- Menú desplegable para "Conta" -->
+        <div>
+          <!-- Botón para desplegar el submenú -->
+          <button (click)="toggleSubmenu()"
+            class="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white flex items-center justify-between">
+            Conta
+            <!-- Flecha hacia abajo -->
+            <svg *ngIf="!isSubmenuOpen" xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+            <!-- Flecha hacia arriba -->
+            <svg *ngIf="isSubmenuOpen" xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            </svg>
+          </button>
 
-          <!-- Menú de navegación: solo visible en pantallas grandes -->
-          <div class="hidden sm:flex sm:ml-auto sm:block py-5">
-            <div class="flex space-x-10">
-              <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Inicio</a>
-              <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Nosotros</a>
-              <!-- Menú Productos -->
-              <div class="relative group">
-                <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Productos</a>
-                <div
-                  class="absolute bg-white shadow-lg rounded-md mt-2 hidden group-hover:block group-focus-within:block w-max">
-                  <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-red-500">Carros</a>
-                  <a href="#"
-                    class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-red-500">Construcción</a>
-                </div>
-              </div>
-              <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Nuestra Flota</a>
-              <a href="#" class="text-gray-600 hover:text-red-500 font-medium">Contáctenos</a>
+          <!-- Submenú -->
+          <div *ngIf="isSubmenuOpen" class="ml-4 space-y-1">
+            <a href="#"
+              class="block rounded-md px-4 py-2 text-base text-gray-800 hover:bg-red-500 hover:text-white">1</a>
+            <a href="#"
+              class="block rounded-md px-4 py-2 text-base text-gray-800 hover:bg-red-500 hover:text-white">2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section>
+    <div class="relative isolate overflow-hidden bg-gray-900 py-14 sm:py-24 md:py-48 lg:py-64">
+      <div class="absolute inset-0 -z-10">
+        <img *ngFor="let image of images; let i = index" [src]="image.src" alt="image"
+          [class]="i === currentIndex ? 'block' : 'hidden'"
+          class="absolute inset-0 w-full h-[70vh] sm:h-[70vh] md:h-[65vh] lg:h-[81vh] object-cover">
+      </div>
+
+      <!-- Botón de retroceso -->
+      <button id="prevButton" (click)="goToPrevious()"
+        class="absolute left-5 top-1/2 transform -translate-y-1/2 text-white p-4 rounded-full shadow-lg hover:bg-slate-200 hover:text-gray-500 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition-all duration-300 ease-in-out">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+
+      <!-- Botón de adelanto -->
+      <button id="nextButton" (click)="goToNext()"
+        class="absolute right-5 top-1/2 transform -translate-y-1/2 text-white p-4 rounded-full shadow-lg hover:bg-slate-200 hover:text-gray-500 focus:outline-none focus:ring-4 focus:ring-blue-400 focus:ring-opacity-50 transition-all duration-300 ease-in-out">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl lg:mx-0 px-6 lg:px-8 flex flex-col justify-center items-center h-full">
+          <!-- Título -->
+          <h2 id="materiales-heading"
+            class="text-5xl font-semibold tracking-tight text-white sm:text-4xl lg:text-6xl xl:text-7xl lg:whitespace-nowrap text-center">
+            Materiales de Construcción
+          </h2>
+          <p id="materiales-description"
+            class="mt-6 text-xl font-semibold text-white sm:text-2xl lg:text-3xl text-center">
+            En Servicios Generales Gabriel & Zareli encontrarás los mejores materiales para construcción, mantenimiento
+            o remodelación de tu vivienda.
+          </p>
+        </div>
+        <!-- Botón de "Ver más" -->
+        <div class="flex justify-center mt-10">
+          <button
+            class="px-6 py-3 text-white font-semibold bg-red-500 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition duration-300">
+            Ver más
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-white py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+          <h5 class="text-center text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Nuestros Productos
+          </h5>
+        </div>
+        <div
+          class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <!-- Imagen con bordes redondeados -->
+            <img alt=""
+              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+              class="rounded-lg">
+
+            <div class="group relative">
+              <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  Cemento
+                </a>
+              </h3>
             </div>
-          </div>
-        </div>
-      </div>
+          </article>
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <!-- Imagen con bordes redondeados -->
+            <img alt=""
+              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+              class="rounded-lg">
 
-      <!-- Menú móvil (pantallas pequeñas) -->
-      <div class="sm:hidden" [class.hidden]="!isMenuOpen" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2">
-          <a href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Inicio</a>
-          <a href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Nosotros</a>
-          <a href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Productos</a>
-          <!-- Menú desplegable para "Conta" -->
-          <div>
-            <!-- Botón para desplegar el submenú -->
-            <button (click)="toggleSubmenu()"
-              class="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white flex items-center justify-between">
-              Conta
-              <!-- Flecha hacia abajo -->
-              <svg *ngIf="!isSubmenuOpen" xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-              <!-- Flecha hacia arriba -->
-              <svg *ngIf="isSubmenuOpen" xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-              </svg>
-            </button>
-
-            <!-- Submenú -->
-            <div *ngIf="isSubmenuOpen" class="ml-4 space-y-1">
-              <a href="#"
-                class="block rounded-md px-4 py-2 text-base text-gray-800 hover:bg-red-500 hover:text-white">1</a>
-              <a href="#"
-                class="block rounded-md px-4 py-2 text-base text-gray-800 hover:bg-red-500 hover:text-white">2</a>
+            <div class="group relative">
+              <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  Alambre
+                </a>
+              </h3>
             </div>
-          </div>
+          </article>
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <!-- Imagen con bordes redondeados -->
+            <img alt=""
+              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+              class="rounded-lg">
+
+            <div class="group relative">
+              <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  Alambre
+                </a>
+              </h3>
+            </div>
+          </article>
+          <!-- More posts... -->
         </div>
       </div>
-    </nav>
-    <section>
-      <h1>contenido</h1>
-      <h1>contenido</h1>
-      <h1>contenido</h1>
-      <h1>contenido</h1>
-      <h1>contenido</h1>
-      <h1>contenido</h1>
-    </section>
-    <footer class="bg-gray-900 text-white">
-      <!-- Primera capa: cuatro columnas -->
-      <div class="max-w-screen-xl mx-auto py-12 px-6 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Columna 1: Logo, descripción y redes sociales -->
-        <div class="flex flex-col items-center">
-          <img src="../assets/img/logo3.jpeg" alt="Logo" class="mb-4 h-20 w-auto">
-          <p class="text-center mb-4 text-sm">Empresa peruana líder en la comercialización de productos de alta calidad
-            para el sector de la construcción.</p>
-          <div class="flex space-x-4">
-            <a href="#"
-              class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#"
-              class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#"
-              class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Columna 2: Navegación -->
-        <div class="flex flex-col">
-          <h4 class="text-lg font-semibold mb-3">Navegación</h4>
-          <ul class="list-disc pl-5">
-            <li><a href="#" class="text-gray-300 hover:text-white">Inicio</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white">Nosotros</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white">Productos</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white">Nuestra Flota</a></li>
-          </ul>
-        </div>
-
-        <!-- Columna 3: Ubicación -->
-        <div class="flex flex-col">
-          <h4 class="text-lg font-semibold mb-3">Ubícanos</h4>
-          <p class="text-gray-300">Calle Camino Real</p>
-        </div>
-
-        <!-- Columna 4: Imagen (Mapa) -->
-        <div class="flex flex-col">
-          <iframe
-            src="https://www.google.com/maps/d/u/1/embed?mid=17oPselbC9Op5R4oL79MhMjkrJKpUUg0&ehbc=2E312F&noprof=1"
-            width="300" height="210" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+  <footer class="bg-gray-900 text-white">
+    <!-- Primera capa: cuatro columnas -->
+    <div class="max-w-screen-xl mx-auto py-12 px-6 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Columna 1: Logo, descripción y redes sociales -->
+      <div class="flex flex-col items-center">
+        <img src="../assets/img/logo3.jpeg" alt="Logo" class="mb-4 h-20 w-auto">
+        <p class="text-center mb-4 text-sm">Empresa peruana líder en la comercialización de productos de alta calidad
+          para el sector de la construcción.</p>
+        <div class="flex space-x-4">
+          <a href="#"
+            class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#"
+            class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#"
+            class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
       </div>
-      <!-- Segunda capa: Fondo negro y mensaje -->
-      <div class="bg-gray-950 py-4 text-white">
-        <div class="max-w-screen-xl mx-auto px-6">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center sm:text-left">
-            <p class="text-sm text-gray-400">
-              ©G & Z S.A.C. - Todos los derechos reservados 2024
-            </p>
-            <p class="text-sm text-gray-400">
-              Agencia CVidal Digital
-            </p>
-          </div>
+
+      <!-- Columna 2: Navegación -->
+      <div class="flex flex-col">
+        <h4 class="text-lg font-semibold mb-3">Navegación</h4>
+        <ul class="list-disc pl-5">
+          <li><a href="#" class="text-gray-300 hover:text-white">Inicio</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Nosotros</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Productos</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Nuestra Flota</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Ubicación -->
+      <div class="flex flex-col">
+        <h4 class="text-lg font-semibold mb-3">Ubícanos</h4>
+        <p class="text-gray-300">Calle Camino Real</p>
+      </div>
+
+      <!-- Columna 4: Imagen (Mapa) -->
+      <div class="flex flex-col">
+        <iframe src="https://www.google.com/maps/d/u/1/embed?mid=17oPselbC9Op5R4oL79MhMjkrJKpUUg0&ehbc=2E312F&noprof=1"
+          width="300" height="210" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <!-- Segunda capa: Fondo negro y mensaje -->
+    <div class="bg-gray-950 py-4 text-white">
+      <div class="max-w-screen-xl mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center sm:text-left">
+          <p class="text-sm text-gray-400">
+            ©G & Z S.A.C. - Todos los derechos reservados 2024
+          </p>
+          <p class="text-sm text-gray-400">
+            Agencia CVidal Digital
+          </p>
         </div>
       </div>
-    </footer>
- 
+    </div>
+  </footer>
+
 </body>
 
 </html>

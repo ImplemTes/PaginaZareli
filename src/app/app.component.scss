@@ -9,3 +9,18 @@
   #mobile-menu {
     transition: transform 0.3s ease;
   }
+
+/* Fuentes personalizadas */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+#materiales-heading {
+  font-family: 'Inter', sans-serif; /* Cambia por cualquier fuente que prefieras */
+}
+
+#materiales-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem; /* Tamanho de fuente ajustado */
+ 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
