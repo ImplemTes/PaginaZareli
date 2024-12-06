@@ -62,6 +62,7 @@
       </div>
     </div>
   </div>
+  <!-- Nav opciones -->
   <nav class="bg-white py-3">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
@@ -148,6 +149,9 @@
     </div>
   </nav>
   <section>
+    <!-- Empresa -->
+
+    <!-- Valores -->
     <div class="relative isolate overflow-hidden bg-gray-900 py-14 sm:py-24 md:py-48 lg:py-64">
       <div class="absolute inset-0 -z-10">
         <img *ngFor="let image of images; let i = index" [src]="image.src" alt="image"
@@ -193,7 +197,81 @@
         </div>
       </div>
     </div>
+    <!-- Productos -->
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="bg-white py-24 sm:py-4">
+        <div class="mx-auto max-w-2xl text-center">
+          <h5 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Nuestros Valores</h5>
+        </div>
+        <!-- Sección de cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 p-6">
+          <!-- Card 1: Puntualidad -->
+          <div
+            class="flex flex-col items-center bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 rounded-lg p-6 border-4 border-red-600 transition duration-300 ease-in-out h-full">
+            <div
+              class="w-40 h-40 border-6 border-red-600 rounded-full flex justify-center items-center overflow-hidden mb-6">
+              <img src="/assets/carrusel/imagen2.jpg" alt="Puntualidad" class="object-cover w-full h-full">
+            </div>
+            <h3 class="text-2xl font-semibold text-center text-gray-800">Puntualidad</h3>
+            <p class="text-center text-gray-600 mt-2 flex-grow">Nos comprometemos a entregar los materiales de
+              construcción a tiempo, garantizando la satisfacción de nuestros clientes.</p>
+          </div>
 
+          <!-- Card 2: Innovación -->
+          <div
+            class="flex flex-col items-center bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 rounded-lg p-6 border-4 border-red-600 transition duration-300 ease-in-out h-full">
+            <div
+              class="w-40 h-40 border-6 border-red-600 rounded-full flex justify-center items-center overflow-hidden mb-6">
+              <img src="/assets/carrusel/imagen2.jpg" alt="Innovación" class="object-cover w-full h-full">
+            </div>
+            <h3 class="text-2xl font-semibold text-center text-gray-800">Innovación</h3>
+            <p class="text-center text-gray-600 mt-2 flex-grow">Incorporamos las últimas tecnologías para optimizar
+              nuestros procesos y mejorar la calidad de nuestros productos.</p>
+          </div>
+
+          <!-- Card 3: Calidad -->
+          <div
+            class="flex flex-col items-center bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 rounded-lg p-6 border-4 border-red-600 transition duration-300 ease-in-out h-full">
+            <div
+              class="w-40 h-40 border-6 border-red-600 rounded-full flex justify-center items-center overflow-hidden mb-6">
+              <img src="/assets/carrusel/imagen2.jpg" alt="Calidad" class="object-cover w-full h-full">
+            </div>
+            <h3 class="text-2xl font-semibold text-center text-gray-800">Calidad</h3>
+            <p class="text-center text-gray-600 mt-2 flex-grow">Ofrecemos materiales de la más alta calidad, asegurando
+              durabilidad y fiabilidad en todos nuestros productos.</p>
+          </div>
+        </div>
+
+        <!-- Fila 2: Cards de Seguridad y Responsabilidad -->
+        <div class="flex justify-center items-center p-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <!-- Card 1: Seguridad -->
+            <div
+              class="flex flex-col items-center bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 rounded-lg p-6 border-4 border-red-600 transition duration-300 ease-in-out h-full">
+              <div
+                class="w-40 h-40 border-6 border-red-600 rounded-full flex justify-center items-center overflow-hidden mb-6">
+                <img src="/assets/carrusel/imagen2.jpg" alt="Seguridad" class="object-cover w-full h-full">
+              </div>
+              <h3 class="text-2xl font-semibold text-center text-gray-800">Seguridad</h3>
+              <p class="text-center text-gray-600 mt-2 flex-grow">La seguridad es nuestra prioridad, asegurando un
+                entorno de trabajo seguro tanto para nuestros empleados como para nuestros clientes.</p>
+            </div>
+
+            <!-- Card 2: Responsabilidad -->
+            <div
+              class="flex flex-col items-center bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 rounded-lg p-6 border-4 border-red-600 transition duration-300 ease-in-out h-full">
+              <div
+                class="w-40 h-40 border-6 border-red-600 rounded-full flex justify-center items-center overflow-hidden mb-6">
+                <img src="/assets/carrusel/imagen2.jpg" alt="Responsabilidad" class="object-cover w-full h-full">
+              </div>
+              <h3 class="text-2xl font-semibold text-center text-gray-800">Responsabilidad</h3>
+              <p class="text-center text-gray-600 mt-2 flex-grow">Nos comprometemos con la ética y la responsabilidad en
+                cada proyecto, respetando el medio ambiente y cumpliendo nuestras promesas con los clientes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <div class="bg-white py-24 sm:py-32">
