@@ -261,9 +261,13 @@
       <!--Carrusel-->
       <div class="mb-4 relative isolate overflow-hidden bg-gray-900 py-14 sm:py-24 md:py-48 lg:py-64">
         <div class="absolute inset-0 -z-10">
+          <!-- Imagen -->
           <img *ngFor="let image of images; let i = index" [src]="image.src" alt="image"
             [class]="i === currentIndex ? 'block' : 'hidden'"
-            class="absolute inset-0 w-full h-[70vh] sm:h-[70vh] md:h-[80vh] lg:h-[98vh] object-cover" />
+            class="absolute inset-0 w-full h-[70vh] sm:h-[70vh] md:h-[80vh] lg:h-[100vh] object-cover" />
+        
+          <!-- Capa de oscurecimiento -->
+          <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Aumentamos la opacidad -->
         </div>
 
         <!-- Botón de retroceso -->
@@ -455,48 +459,49 @@
         </div>
       </div>
 
-<!-- Flota Vehicular -->
-<div class="bg-white lg:py-4 sm:py-6 mt-2 mb-0">
-  <!-- Eliminamos la línea de separación aquí y ajustamos el margen -->
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <!-- Contenedor de vehiculos -->
-    <div class="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:mt-6 sm:pt-6 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-      <!-- Imagen 1 -->
-      <article class="flex max-w-xl flex-col items-start justify-between">
-        <img alt="Imagen 1"
-          src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
-          class="rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105" />
-      </article>
+      <!-- Flota Vehicular -->
+      <div class="bg-white lg:py-4 sm:py-6 mt-2 mb-0">
+        <!-- Eliminamos la línea de separación aquí y ajustamos el margen -->
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <!-- Contenedor de vehiculos -->
+          <div
+            class="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:mt-6 sm:pt-6 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            <!-- Imagen 1 -->
+            <article class="flex max-w-xl flex-col items-start justify-between">
+              <img alt="Imagen 1"
+                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+                class="rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105" />
+            </article>
 
-      <!-- Imagen 2 -->
-      <article class="flex max-w-xl flex-col items-start justify-between">
-        <img alt="Imagen 2"
-          src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
-          class="rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105" />
-      </article>
+            <!-- Imagen 2 -->
+            <article class="flex max-w-xl flex-col items-start justify-between">
+              <img alt="Imagen 2"
+                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+                class="rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105" />
+            </article>
 
-      <!-- Texto con botón -->
-      <article class="flex max-w-xl flex-col items-center justify-center text-center">
-        <div class="group relative">
-          <h3 class="mt-3 text-2xl sm:text-3xl font-semibold text-gray-900 group-hover:text-gray-600">
-            <span class="absolute inset-0"></span>
-            Nuestra flota de vehículos
-          </h3>
-          <p class="mt-4 text-lg text-gray-800 font-bold">
-            Contamos con una flota moderna y eficiente para satisfacer
-            todas tus necesidades de transporte.
-          </p>
-          <div class="mt-6 flex justify-center">
-            <a href="#"
-              class="px-8 py-4 text-white font-semibold bg-red-500 rounded-full shadow-lg hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition duration-300 transform hover:scale-105">
-              Ver más
-            </a>
+            <!-- Texto con botón -->
+            <article class="flex max-w-xl flex-col items-center justify-center text-center">
+              <div class="group relative">
+                <h3 class="mt-3 text-2xl sm:text-3xl font-semibold text-gray-900 group-hover:text-gray-600">
+                  <span class="absolute inset-0"></span>
+                  Nuestra flota de vehículos
+                </h3>
+                <p class="mt-4 text-lg text-gray-800 font-bold">
+                  Contamos con una flota moderna y eficiente para satisfacer
+                  todas tus necesidades de transporte.
+                </p>
+                <div class="mt-6 flex justify-center">
+                  <a href="#"
+                    class="px-8 py-4 text-white font-semibold bg-red-500 rounded-full shadow-lg hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition duration-300 transform hover:scale-105">
+                    Ver más
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </article>
-    </div>
-  </div>
-</div>
+      </div>
 
 
       <!-- Valores con Accordion -->
@@ -595,7 +600,11 @@
         <!-- Columna 3: Ubicación -->
         <div class="flex flex-col">
           <h4 class="text-lg font-semibold mb-3">Ubícanos</h4>
-          <p class="text-gray-300">Calle Camino Real</p>
+          <p class="text-gray-300">Av. Camino Real Mz 32 Lote URB. La Rinconada trujillo</p>
+          <h4 class="text-lg font-semibold mb-2">Contacto</h4>
+            <p class="text-gray-300"> 
+              zreliadfdfdf_hotmail.com </p>
+          <p class="text-gray-300">(+51)999 999 999</p>
         </div>
 
         <!-- Columna 4: Imagen (Mapa) -->
