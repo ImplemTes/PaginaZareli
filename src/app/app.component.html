@@ -22,7 +22,7 @@
     />
   </head>
 
-  <body>
+  <body >
     <!-- Línea roja con información -->
     <div class="text-white py-3" id="lineaR">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -177,7 +177,7 @@
                 </div>
               </div>
               <a
-                [routerLink]="['/home/contacto/']"
+                [routerLink]="['/home/flota/']" 
                 class="text-gray-600 hover:text-red-500 font-medium"
                 >Nuestra Flota</a
               >
@@ -205,9 +205,9 @@
             >Nosotros</a
           >
           <a
-            [routerLink]="['/home/contacto/']"
+            [routerLink]="['/home/flota/']" 
             class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white"
-            >Productos</a
+            >Nuestra flota</a
           >
           <!-- Menú desplegable para "Conta" -->
           <div>
@@ -271,7 +271,7 @@
     <div class="bg-[#fc2727] py-0.5">
       <hr class="border-t border-[#fc2727] mx-4 md:mx-8" />
     </div>
-    <section>
+    <section >
       <!-- Aquí se cargará el contenido dinámico de las rutas -->
       <router-outlet></router-outlet>
     </section>
@@ -322,7 +322,7 @@
             </li>
             <li>
               <a
-                [routerLink]="['/home/nosotros/']"
+                 [routerLink]="['/home/nosotros/']"
                 class="text-gray-300 hover:text-white"
                 >Nosotros</a
               >

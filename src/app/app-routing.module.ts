@@ -3,7 +3,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
-
+import { FlotaComponent } from './components/flota/flota.component';
 const routes: Routes = [
   {
     path: '',
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },  // Ruta para la página de inicio
   { path: 'home/contacto', component: ContactoComponent },  
   { path: 'home/nosotros', component: NosotrosComponent },
-
+  { path: 'home/flota', component: FlotaComponent },  // Ruta para la página de flota
 ];
 
 @NgModule({

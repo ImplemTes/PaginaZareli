@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ContactoComponent {
 
+
+  RedirigirE() {
+    window.open("https://www.facebook.com/Zareli-Arroyo-110743790447724/", "_blank");
+  }
 }
