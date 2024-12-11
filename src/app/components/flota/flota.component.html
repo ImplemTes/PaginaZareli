@@ -1,63 +1,43 @@
-<section class="min-h-screen">
-    <!-- Encabezado con imagen de fondo -->
+<section  >
     <div class="relative flex justify-center items-center h-24 md:h-32 lg:h-36">
+        <!-- Contenedor con estilos agrupados -->
         <div class="image-container relative w-full h-full">
-            <!-- Texto centrado en la imagen -->
-            <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
-                <h1 class="text-white text-lg md:text-2xl lg:text-3xl font-bold shadow-text">
-                    Nuestra Flota
-                </h1>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sección de contenido -->
-    <div class="bg-white text-gray-800 flex flex-col md:flex-row p-8 max-w-6xl mx-auto mb-10 shadow-lg rounded-lg">
-        <!-- Información textual -->
-        <div class="text-left md:w-1/2 mb-6 md:mb-0">
-            <h1 class="text-4xl font-bold mb-6 text-center md:text-left">
-                Nuestra flota de vehículos
+          <!-- Texto centrado -->
+          <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
+            <h1 class="text-white text-lg md:text-2xl lg:text-3xl font-bold shadow-text">
+              Nuestra Flota
             </h1>
-            <p class="text-lg text-justify leading-relaxed text-gray-700">
-                Somos una destacada empresa peruana comprometida con ofrecer soluciones
-                de transporte eficientes y confiables. Contamos con una amplia flota de
-                vehículos adaptados para distintas necesidades, desde distribución hasta
-                carga pesada. Cada unidad está equipada para garantizar la seguridad,
-                puntualidad y calidad en nuestros servicios, consolidándonos como un
-                aliado estratégico para el sector construcción y distribución.
-            </p>
+          </div>
         </div>
-
-        <!-- Carrusel -->
-        <div class="mb-4 relative isolate overflow-hidden bg-gray-900 py-14 sm:py-24 md:py-32 lg:py-48">
-            <div class="absolute inset-0 -z-10">
-                <!-- Imagen del carrusel que se muestra según el índice -->
-                <!-- Imagen -->
-                <img *ngFor="let image of images2; let i = index" [src]="image.src" alt="image"
-                    [class]="i === currentIndex2 ? 'block' : 'hidden'"
-                    class="absolute inset-0 w-full h-full object-cover" />
-
-                <!-- Capa de oscurecimiento -->
-                <div class="absolute inset-0 bg-black opacity-50"></div>
-            </div>
-
-            <!-- Botón de retroceso -->
-            <button id="prevButton" (click)="goToPrevious()"
-                class="absolute left-5 top-1/2 transform -translate-y-1/2 text-white p-4 rounded-full shadow-lg hover:bg-slate-200 hover:text-gray-500 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition-all duration-300 ease-in-out">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-            </button>
-
-            <!-- Botón de adelanto -->
-            <button id="nextButton" (click)="goToNext()"
-                class="absolute right-5 top-1/2 transform -translate-y-1/2 text-white p-4 rounded-full shadow-lg hover:bg-slate-200 hover:text-gray-500 focus:outline-none focus:ring-4 focus:ring-blue-400 focus:ring-opacity-50 transition-all duration-300 ease-in-out">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-            </button>
-        </div>
+      </div>
+  
+    <br>
+    <!--Contenido v2-->
+      <div
+    class="bg-white text-gray-800 flex flex-col md:flex-row p-8 max-w-6xl mx-auto mb-10 shadow-lg rounded-lg"
+  >
+    <div class="text-left md:w-1/2 mb-6 md:mb-0">
+      <h1 class="text-4xl font-bold mb-6 text-center md:text-left">
+        Conoce más sobre nosotros
+      </h1>
+      <p class="text-lg text-justify leading-relaxed text-gray-700">
+        Somos una destacada empresa peruana especializada en la comercialización
+        de productos de alta calidad para el sector de la construcción. Desde el
+        inicio de nuestras operaciones en 2015, hemos contado con el respaldo de
+        las principales marcas del mercado. Nos enfocamos en la venta al por
+        mayor y menor, así como en la distribución a ferreterías, constructoras
+        y contratistas. Nuestro principal objetivo es satisfacer las necesidades
+        de nuestros clientes, superando sus expectativas y posicionándonos como
+        sus aliados estratégicos de confianza.
+      </p>
     </div>
-</section>
+    <div class="md:w-1/2 flex justify-center items-center">
+      <img
+        src="/assets/nosotros/imagen2.jpg"
+        alt="Imagen Conócenos"
+        class="w-70 h-64 rounded-2xl border-8 border-gray-300 shadow-2xl shadow-red-500/50 object-cover transition-transform duration-300 hover:scale-105"
+      />
+    </div>
+  </div>
+  </section>
+  
