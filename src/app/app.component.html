@@ -130,48 +130,60 @@
             </button>
           </div>
 
-          <!-- Logo: centrado en pantallas pequeñas -->
+          <!-- Contenedor del logo: centrado en pantallas pequeñas y alineado a la izquierda en pantallas grandes -->
           <div class="flex flex-1 items-center justify-center sm:justify-start">
-            <img
-              class="h-20 w-auto"
-              src="../assets/img/logo.jpeg"
-              alt="Your Company"
-            />
+            <a [routerLink]="['/home/']" class="block">
+              <img
+                class="h-auto max-h-20 w-auto"
+                src="../assets/img/logo.jpg"
+                alt="Your Company"
+              />
+            </a>
           </div>
 
           <!-- Menú de navegación: solo visible en pantallas grandes -->
           <div class="hidden sm:flex sm:ml-auto py-5">
             <div class="flex space-x-10">
-              <a href="#" class="text-gray-600 hover:text-red-500 font-medium"
+              <a
+                [routerLink]="['/home/']"
+                class="text-gray-600 hover:text-red-500 font-medium"
                 >Inicio</a
               >
-              <a href="#" class="text-gray-600 hover:text-red-500 font-medium"
+              <a
+                [routerLink]="['/home/nosotros/']"
+                class="text-gray-600 hover:text-red-500 font-medium"
                 >Nosotros</a
               >
               <!-- Menú Productos -->
               <div class="relative group">
-                <a href="#" class="text-gray-600 hover:text-red-500 font-medium"
+                <a
+                  [routerLink]="['/home/contacto/']"
+                  class="text-gray-600 hover:text-red-500 font-medium"
                   >Productos</a
                 >
                 <div
                   class="absolute bg-white shadow-lg rounded-md mt-2 hidden group-hover:block group-focus-within:block w-max z-50"
                 >
                   <a
-                    href="#"
+                    [routerLink]="['/home/contacto/']"
                     class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-red-500"
                     >Carros</a
                   >
                   <a
-                    href="#"
+                    [routerLink]="['/home/contacto/']"
                     class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-red-500"
                     >Construcción</a
                   >
                 </div>
               </div>
-              <a href="#" class="text-gray-600 hover:text-red-500 font-medium"
+              <a
+                [routerLink]="['/home/contacto/']"
+                class="text-gray-600 hover:text-red-500 font-medium"
                 >Nuestra Flota</a
               >
-              <a href="#" class="text-gray-600 hover:text-red-500 font-medium"
+              <a
+                [routerLink]="['/home/contacto/']"
+                class="text-gray-600 hover:text-red-500 font-medium"
                 >Contáctenos</a
               >
             </div>
@@ -183,17 +195,17 @@
       <div class="sm:hidden" [class.hidden]="!isMenuOpen" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
           <a
-            href="#"
+            [routerLink]="['/home/']"
             class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white"
             >Inicio</a
           >
           <a
-            href="#"
+            [routerLink]="['/home/nosotros/']"
             class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white"
             >Nosotros</a
           >
           <a
-            href="#"
+            [routerLink]="['/home/contacto/']"
             class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white"
             >Productos</a
           >
@@ -242,12 +254,12 @@
             <!-- Submenú -->
             <div *ngIf="isSubmenuOpen" class="ml-4 space-y-1">
               <a
-                href="#"
+                [routerLink]="['/home/contacto/']"
                 class="block rounded-md px-4 py-2 text-base text-gray-800 hover:bg-red-500 hover:text-white"
                 >1</a
               >
               <a
-                href="#"
+                [routerLink]="['/home/contacto/']"
                 class="block rounded-md px-4 py-2 text-base text-gray-800 hover:bg-red-500 hover:text-white"
                 >2</a
               >
@@ -256,31 +268,46 @@
         </div>
       </div>
     </nav>
+    <div class="bg-[#fc2727] py-0.5">
+      <hr class="border-t border-[#fc2727] mx-4 md:mx-8" />
+    </div>
     <section>
-        <!-- Aquí se cargará el contenido dinámico de las rutas -->
-        <router-outlet></router-outlet>
+      <!-- Aquí se cargará el contenido dinámico de las rutas -->
+      <router-outlet></router-outlet>
     </section>
     <footer class="bg-gray-900 text-white">
       <!-- Primera capa: cuatro columnas -->
-      <div class="max-w-screen-xl mx-auto py-12 px-6 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div
+        class="max-w-screen-xl mx-auto py-12 px-6 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+      >
         <!-- Columna 1: Logo, descripción y redes sociales -->
         <div class="flex flex-col items-center">
-          <img src="../assets/img/logo3.jpeg" alt="Logo" class="mb-4 h-20 w-auto" />
+          <img
+            src="../assets/img/logo3.jpeg"
+            alt="Logo"
+            class="mb-4 h-20 w-auto"
+          />
           <p class="text-center mb-4 text-sm">
             Empresa peruana líder en la comercialización de productos de alta
             calidad para el sector de la construcción.
           </p>
           <div class="flex space-x-4">
-            <a href="#"
-              class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
+            <a
+              href="#"
+              class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out"
+            >
               <i class="fab fa-facebook"></i>
             </a>
-            <a href="#"
-              class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
+            <a
+              href="#"
+              class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out"
+            >
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="#"
-              class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
+            <a
+              href="#"
+              class="text-white hover:bg-gray-500 hover:text-white px-4 py-2 rounded-full transition duration-300 ease-in-out"
+            >
               <i class="fab fa-instagram"></i>
             </a>
           </div>
@@ -294,13 +321,19 @@
               <a href="#" class="text-gray-300 hover:text-white">Inicio</a>
             </li>
             <li>
-              <a href="#" class="text-gray-300 hover:text-white">Nosotros</a>
+              <a
+                [routerLink]="['/home/nosotros/']"
+                class="text-gray-300 hover:text-white"
+                >Nosotros</a
+              >
             </li>
             <li>
               <a href="#" class="text-gray-300 hover:text-white">Productos</a>
             </li>
             <li>
-              <a href="#" class="text-gray-300 hover:text-white">Nuestra Flota</a>
+              <a href="#" class="text-gray-300 hover:text-white"
+                >Nuestra Flota</a
+              >
             </li>
           </ul>
         </div>
@@ -308,10 +341,11 @@
         <!-- Columna 3: Ubicación -->
         <div class="flex flex-col">
           <h4 class="text-lg font-semibold mb-3">Ubícanos</h4>
-          <p class="text-gray-300">Av. Camino Real Mz 32 Lote URB. La Rinconada trujillo</p>
+          <p class="text-gray-300">
+            Av. Camino Real Mz 32 Lote URB. La Rinconada trujillo
+          </p>
           <h4 class="text-lg font-semibold mb-2">Contacto</h4>
-            <p class="text-gray-300"> 
-              zreliadfdfdf_hotmail.com </p>
+          <p class="text-gray-300">zreliadfdfdf_hotmail.com</p>
           <p class="text-gray-300">(+51)999 999 999</p>
         </div>
 
@@ -319,14 +353,21 @@
         <div class="flex flex-col">
           <iframe
             src="https://www.google.com/maps/d/u/1/embed?mid=17oPselbC9Op5R4oL79MhMjkrJKpUUg0&ehbc=2E312F&noprof=1"
-            width="300" height="210" style="border: 0" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            width="300"
+            height="210"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
       <!-- Segunda capa: Fondo negro y mensaje -->
       <div class="bg-gray-950 py-4 text-white">
         <div class="max-w-screen-xl mx-auto px-6">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center sm:text-left">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center sm:text-left"
+          >
             <p class="text-sm text-gray-400">
               ©G & Z S.A.C. - Todos los derechos reservados 2024
             </p>
