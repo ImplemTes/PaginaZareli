@@ -9,4 +9,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }  
 
+  button.transition-all {
+    transition: all 0.3s ease-in-out;
+  }
   

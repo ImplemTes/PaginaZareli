@@ -6,36 +6,37 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./flota.component.scss']
 })
 export class FlotaComponent implements OnInit, OnDestroy {
-  images2 = [
-    { src: '/assets/carrusel/imagen1.jpg' },
-    { src: '/assets/carrusel/imagen2.jpg' },
-    { src: '/assets/carrusel/imagen3.jpg' }
+  images = [
+    '/assets/flota/imagen1.jpg',
+    '/assets/flota/imagen2.jpg',
+    '/assets/flota/imagen3.jpg'
   ];
+  currentSlide = 0;
+  intervalId: any;
 
-  currentIndex2: number = 0;
-  interval2: any;
-
-  ngOnInit(): void {
-    this.startCarousel2();
+  ngOnInit() {
+    // Inicia el cambio automático cada 3 segundos
+    this.intervalId = setInterval(() => {
+      this.nextSlide();
+    }, 4000);
   }
 
-  startCarousel2() {
-    this.interval2 = setInterval(() => {
-      this.currentIndex2 = (this.currentIndex2 + 1) % this.images2.length;
-    }, 3000);
-  }
-
-  ngOnDestroy(): void {
-    if (this.interval2) {
-      clearInterval(this.interval2);
+  ngOnDestroy() {
+    // Limpia el intervalo al destruir el componente
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
     }
   }
 
-  goToNext2() {
-    this.currentIndex2 = (this.currentIndex2 + 1) % this.images2.length;
+  prevSlide() {
+    this.currentSlide = (this.currentSlide > 0) ? this.currentSlide - 1 : this.images.length - 1;
   }
 
-  goToPrevious2() {
-    this.currentIndex2 = (this.currentIndex2 - 1 + this.images2.length) % this.images2.length;
+  nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % this.images.length;
+  }
+
+  goToSlide(index: number) {
+    this.currentSlide = index;
   }
 }
