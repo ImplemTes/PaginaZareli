@@ -4,6 +4,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { FlotaComponent } from './components/flota/flota.component';
+
 const routes: Routes = [
   {path: '',redirectTo: 'home', pathMatch: 'full'}, // Redirige a 'home' cuando la ruta esté vacía
   { path: 'home', component: HomeComponent },  // Ruta para la página de inicio
@@ -18,4 +19,5 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
