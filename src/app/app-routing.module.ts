@@ -10,6 +10,7 @@ const routes: Routes = [
     redirectTo: 'home',  // Redirige a 'home' cuando la ruta esté vacía
     pathMatch: 'full'
   },
+  { path: '**', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },  // Ruta para la página de inicio
   { path: 'home/contacto', component: ContactoComponent },  
   
