@@ -12,6 +12,7 @@ const routes: Routes = [
   },
   { path: 'home', component: HomeComponent },  // Ruta para la página de inicio
   { path: 'home/contacto', component: ContactoComponent },  
+  
   { path: 'home/nosotros', component: NosotrosComponent },
   { path: 'home/flota', component: FlotaComponent },  // Ruta para la página de flota
 ];
