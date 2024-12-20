@@ -139,35 +139,39 @@
           class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Inicio</a>
         <a [routerLink]="['/home/nosotros/']"
           class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Nosotros</a>
-        <a [routerLink]="['/home/flota/']"
+                <!-- Menú desplegable para "Conta" -->
+                <div>
+                  <!-- Botón para desplegar el submenú -->
+                  <button (click)="toggleSubmenu()"
+                    class="w-full text-left flex px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white items-center justify-between">
+                    Productos
+                    <!-- Flecha hacia abajo -->
+                    <svg *ngIf="!isSubmenuOpen" xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <!-- Flecha hacia arriba -->
+                    <svg *ngIf="isSubmenuOpen" xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                    </svg>
+                  </button>
+        
+                  <!-- Submenú -->
+                  <div *ngIf="isSubmenuOpen" class="ml-4 space-y-1">
+                    <a [routerLink]="['/home/producto/fierro/']"
+                      class="block rounded-md px-4 py-2 text-base text-gray-800 hover:bg-red-500 hover:text-white">Cemento</a>
+                    <a [routerLink]="['/home/producto/cemento/']"
+                      class="block rounded-md px-4 py-2 text-base text-gray-800 hover:bg-red-500 hover:text-white">Fierro</a>
+                      <a [routerLink]="['/home/producto/ladrillo/']"
+                      class="block rounded-md px-4 py-2 text-base text-gray-800 hover:bg-red-500 hover:text-white">Ladrillo</a>
+                  </div>
+                </div>
+          <a [routerLink]="['/home/flota/']"
           class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Nuestra
           flota</a>
-        <!-- Menú desplegable para "Conta" -->
-        <div>
-          <!-- Botón para desplegar el submenú -->
-          <button (click)="toggleSubmenu()"
-            class="w-full text-left flex px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white items-center justify-between">
-            Conta
-            <!-- Flecha hacia abajo -->
-            <svg *ngIf="!isSubmenuOpen" xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-            <!-- Flecha hacia arriba -->
-            <svg *ngIf="isSubmenuOpen" xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-            </svg>
-          </button>
-
-          <!-- Submenú -->
-          <div *ngIf="isSubmenuOpen" class="ml-4 space-y-1">
-            <a [routerLink]="['/home/contacto/']"
-              class="block rounded-md px-4 py-2 text-base text-gray-800 hover:bg-red-500 hover:text-white">1</a>
-            <a [routerLink]="['/home/contacto/']"
-              class="block rounded-md px-4 py-2 text-base text-gray-800 hover:bg-red-500 hover:text-white">2</a>
-          </div>
-        </div>
+        <a [routerLink]="['/home/contacto/']"
+        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-red-500 hover:text-white">Contáctenos</a>       
       </div>
     </div>
   </nav>
