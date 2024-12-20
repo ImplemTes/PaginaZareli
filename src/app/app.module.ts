@@ -4,6 +4,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FlotaComponent } from './components/flota/flota.component';
+import { LadrilloComponent } from './components/ladrillo/ladrillo.component';
+import { CementoComponent } from './components/cemento/cemento.component';
+import { FierroComponent } from './components/fierro/fierro.component';
+
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { CommonModule } from '@angular/common';
@@ -11,6 +15,9 @@ import { CommonModule } from '@angular/common';
     declarations: [
         AppComponent,
         FlotaComponent,
+        LadrilloComponent,
+        CementoComponent,
+        FierroComponent,
         HomeComponent,
         NosotrosComponent,
         ContactoComponent

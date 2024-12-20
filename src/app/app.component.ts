@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,7 @@ export class AppComponent   {
   title = 'mi-app';
   isMenuOpen = false;  
   isSubmenuOpen = false; 
+  menuVisible: boolean = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -16,5 +17,16 @@ export class AppComponent   {
 
   toggleSubmenu() {
     this.isSubmenuOpen = !this.isSubmenuOpen;
+  }
+
+
+    toggleMenu2(event: Event): void {
+    this.menuVisible = !this.menuVisible;
+    event.stopPropagation(); // Evita que el clic cierre el menú inmediatamente
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(): void {
+    this.menuVisible = false; // Oculta el menú cuando haces clic fuera de él
   }
 }
