@@ -42,9 +42,10 @@
           vivienda.
         </p>
       </div>
-      <!-- Botón de "Ver más" -->
+      <!-- Botón de "Ver más"    [routerLink]="['/home/nosotros/']"--> 
       <div class="flex justify-center mt-10">
         <button
+          [routerLink]="['/home/nosotros/']"
           class="px-6 py-3 text-white font-semibold bg-red-500 rounded-lg hover:bg-white hover:text-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition duration-300">
           Ver más
         </button>
@@ -57,8 +58,8 @@
     class="py-16 flex flex-col md:flex-row bg-white shadow-lg hover:shadow-xl rounded-lg p-6 transition-all duration-300 ease-in-out max-w-7xl mx-auto mb-4">
     <!-- Imagen a la izquierda -->
     <div class="flex-shrink-0 w-full md:w-1/2 mb-4 md:mb-0 flex items-center justify-center">
-      <img src="/assets/carrusel/imagen2.jpg" alt="Servicios Generales Gbriel & Zareli SAC"
-        class="object-cover w-[90%] h-[300px] md:h-[400px] rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105" />
+      <img src="/assets/extra/imagen3.jpg" alt="Servicios Generales Gbriel & Zareli SAC"
+        class="object-cover w-[90%] h-[250px] md:h-[300px] rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105" />
     </div>
 
     <!-- Contenido a la derecha -->
@@ -170,7 +171,7 @@
           </p>
           <div class="mt-6">
             <a
-              href="#"
+              [routerLink]="['/home/producto/fierro/']"
               class="px-8 py-4 text-black font-semibold bg-white rounded-full shadow-lg hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-red-100 focus:ring-opacity-50 transition duration-300 transform hover:scale-105"
             >
               Ver más
@@ -216,7 +217,7 @@
           </p>
           <div class="mt-6 flex justify-center">
             <a
-              href="#"
+              [routerLink]="['/home/flota/']"
               class="px-8 py-4 text-white font-semibold bg-red-500 rounded-full shadow-lg hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition duration-300 transform hover:scale-105"
             >
               Ver más
@@ -234,7 +235,7 @@
     <div class="bg-gray-100 sm:py-1  mx-auto max-w-7xl px-6 lg:px-8">
       <div class="bg-gray-100 py-24 sm:py-4">
         <div class="mx-auto max-w-2xl text-center">
-          <h5 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+          <h5 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-2xl">
             Nuestros Valores
           </h5>
         </div>
@@ -248,7 +249,7 @@
                 class="w-full bg-white rounded-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-xl shadow-lg">
                 <button (click)="toggleAccordion(i)"
                   class="flex items-center justify-between w-full p-6 text-left text-gray-800 hover:bg-gray-200 focus:outline-none rounded-lg">
-                  <h3 class="text-2xl font-semibold">{{ value.title }}</h3>
+                  <h5 class="text-1xl font-bold" >{{ value.title }}</h5>
                   <!-- Ícono de flecha que cambia dependiendo del estado del Accordion -->
                   <span *ngIf="openedIndex === i; else downArrow">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-180" fill="none"
