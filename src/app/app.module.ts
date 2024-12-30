@@ -13,6 +13,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule
 import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
     declarations: [
         AppComponent,
