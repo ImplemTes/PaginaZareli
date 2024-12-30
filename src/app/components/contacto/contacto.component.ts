@@ -52,4 +52,6 @@ export class ContactoComponent {
     this.correo = '';
     this.descripcion = '';
   }
+
+  //npm install sweetalert2 @sweetalert2/ngx-sweetalert2
 }
