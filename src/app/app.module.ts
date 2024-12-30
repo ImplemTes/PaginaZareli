@@ -7,7 +7,7 @@ import { FlotaComponent } from './components/flota/flota.component';
 import { LadrilloComponent } from './components/ladrillo/ladrillo.component';
 import { CementoComponent } from './components/cemento/cemento.component';
 import { FierroComponent } from './components/fierro/fierro.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { CommonModule } from '@angular/common';
@@ -25,6 +25,7 @@ import { CommonModule } from '@angular/common';
     imports: [
         BrowserModule,
         CommonModule,
+        ReactiveFormsModule ,
         AppRoutingModule
     ],
     providers: [],
