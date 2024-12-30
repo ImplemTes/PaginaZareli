@@ -50,3 +50,7 @@ def send_email():
 # Ejecutar la aplicación
 if __name__ == '__main__':
     app.run(debug=True)
+    
+    
+#Para ejecutar la aplicación
+#python app.py
