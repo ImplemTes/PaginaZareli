@@ -11,6 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'; // Importa FormsModule
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
     declarations: [
         AppComponent,
@@ -20,13 +22,15 @@ import { CommonModule } from '@angular/common';
         FierroComponent,
         HomeComponent,
         NosotrosComponent,
-        ContactoComponent
+        ContactoComponent,
     ],
     imports: [
         BrowserModule,
         CommonModule,
         ReactiveFormsModule ,
-        AppRoutingModule
+        FormsModule, // Agrega FormsModule aquí
+        AppRoutingModule,
+        HttpClientModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

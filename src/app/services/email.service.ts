@@ -6,10 +6,11 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class EmailService {
-  private apiUrl = environment.apiUrl + '/api/contactos';
-  constructor(private http: HttpClient) {}
+  private apiUrl = environment.apiUrl + '/send-email';
 
-  sendEmail(formData: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/`, formData);
+  constructor(private http: HttpClient) {}
+  sendEmail(nombre: string, correo: string, descripcion: string): Observable<any> {
+    const payload = { nombre, correo, descripcion };
+    return this.http.post(this.apiUrl, payload);
   }
 }
