@@ -20,10 +20,11 @@ export class ContactoComponent {
   EnviarConsulta() {
     // En este punto, el formulario ya estará validado por Angular en la plantilla (form.invalid)
     this.emailService.sendEmail(this.nombre, this.correo, this.descripcion).subscribe({
-/*************  ✨ Codeium Command ⭐  *************/
-        // Manejador de respuesta exitosa al enviar el formulario de consulta
-        // Muestra una alerta con el resultado y limpia el formulario
-/******  e2a7ea7b-f0ab-4522-ade5-9ed04e490958  *******/next: () => {
+ 
+      // Manejador de respuesta exitosa al enviar el formulario de consulta
+      // Muestra una alerta con el resultado y limpia el formulario
+ 
+      next: () => {
         this.showAlert('Consulta enviada con éxito', 'Gracias por contactarnos. Te responderemos pronto.', 'success');
         this.resetForm(); // Limpia el formulario después de enviar
       },
