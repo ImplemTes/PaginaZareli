@@ -24,7 +24,11 @@ export class AppComponent   {
     this.menuVisible = !this.menuVisible;
     event.stopPropagation(); // Evita que el clic cierre el menú inmediatamente
   }
-
+  closeMenu(): void {
+    this.isMenuOpen = false;
+    this.menuVisible = false; // Cierra también el menú desplegable si está abierto.
+    this.isSubmenuOpen = false; 
+  }
   @HostListener('document:click', ['$event'])
   onDocumentClick(): void {
     this.menuVisible = false; // Oculta el menú cuando haces clic fuera de él
