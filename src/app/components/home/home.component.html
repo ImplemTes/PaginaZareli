@@ -1,82 +1,40 @@
 <!-- Página principal (Home ) -->
 <div>
   <!--Carrusel-->
-  <div
-    class="mb-4 relative isolate overflow-hidden bg-gray-900 py-14 sm:py-24 md:py-48 lg:py-64"
-  >
-    <div class="absolute inset-0 -z-10">
-      <!-- Imagen -->
-      <img
-        *ngFor="let image of images; let i = index"
-        [src]="image.src"
-        alt="image"
-        [class]="i === currentIndex ? 'block' : 'hidden'"
-        class="absolute inset-0 w-full h-full object-cover"
-      />
+  <div class="w-full mb-2 relative isolate overflow-hidden bg-gray-900 py-14 sm:py-24 md:py-48 lg:py-60">
+    <div class="w-full  absolute inset-0 -z-10">
+
+      <img *ngFor="let image of images; let i = index" [src]="image.src" alt="image"
+        [class]="i === currentIndex ? 'block' : 'hidden'" class="absolute inset-0 w-full h-full object-cover" />
 
       <!-- Capa de oscurecimiento -->
       <div class="absolute inset-0 bg-black opacity-50"></div>
     </div>
 
-    <!-- Botón de retroceso -->
-    <button
-      id="prevButton"
-      (click)="goToPrevious()"
-      class="absolute left-5 top-1/2 transform -translate-y-1/2 text-white p-4 rounded-full shadow-lg hover:bg-slate-200 hover:text-gray-500 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition-all duration-300 ease-in-out"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M15 19l-7-7 7-7"
-        ></path>
+    <!-- Navigation Buttons -->
+    <button (click)="goToPrevious()"
+      class="absolute left-4 lg:left-6  top-1/2 transform -translate-y-1/2 text-white p-3 rounded-full bg-gray-400 bg-opacity-20 hover:bg-opacity-50 hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-opacity-50 transition-all duration-100">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
     </button>
-
-    <!-- Botón de adelanto -->
-    <button
-      id="nextButton"
-      (click)="goToNext()"
-      class="absolute right-5 top-1/2 transform -translate-y-1/2 text-white p-4 rounded-full shadow-lg hover:bg-slate-200 hover:text-gray-500 focus:outline-none focus:ring-4 focus:ring-blue-400 focus:ring-opacity-50 transition-all duration-300 ease-in-out"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M9 5l7 7-7 7"
-        ></path>
+    <button (click)="goToNext()"
+      class="absolute right-4 lg:right-6 top-1/2 transform -translate-y-1/2 text-white p-3 rounded-full bg-gray-400 bg-opacity-20 hover:bg-opacity-50 hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-opacity-50 transition-all duration-100">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8  lg:h-10 lg:w-10" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
     </button>
-
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div
-        class="mx-auto max-w-7xl lg:mx-0 px-6 lg:px-8 flex flex-col justify-center items-center h-full"
-      >
+      <div class="mx-auto max-w-7xl lg:mx-0 px-6 lg:px-8 flex flex-col justify-center items-center h-full">
         <!-- Título -->
-        <h2
-          id="materiales-heading"
-          class="text-5xl font-semibold tracking-tight text-white sm:text-4xl lg:text-6xl xl:text-7xl lg:whitespace-nowrap text-center"
-        >
+        <h2 id="materiales-heading"
+          class="font-semibold tracking-tight text-white  text-4xl lg:text-6xl xl:text-7xl lg:whitespace-nowrap text-center">
           Materiales de Construcción
         </h2>
-        <p
-          id="materiales-description"
-          class="mt-6 text-xl font-semibold text-white sm:text-2xl lg:text-3xl text-center"
-        >
+        <p id="materiales-description"
+          class="mt-6 text-2xl md:text-4xl font-semibold text-white lg:text-5xl text-center">
           En Servicios Generales Gabriel & Zareli encontrarás los mejores
           materiales para construcción, mantenimiento o remodelación de tu
           vivienda.
@@ -84,212 +42,186 @@
       </div>
       <!-- Botón de "Ver más"    [routerLink]="['/home/nosotros/']"-->
       <div class="flex justify-center mt-10">
-        <button
-          [routerLink]="['/home/nosotros/']"
-          class="px-6 py-3 text-white font-semibold bg-red-500 rounded-lg hover:bg-white hover:text-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition duration-300"
-        >
+        <button [routerLink]="['/home/nosotros/']"
+          class="px-6 py-3 text-white font-semibold bg-red-500 rounded-lg hover:bg-white hover:text-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition duration-300">
           Ver más
         </button>
       </div>
     </div>
   </div>
 
+
   <!-- Card Empresa -->
-  <div
-    class="py-16 flex flex-col md:flex-row bg-white shadow-lg hover:shadow-xl rounded-lg p-6 transition-all duration-300 ease-in-out max-w-7xl mx-auto mb-4"
-  >
-<!-- Imagen a la izquierda -->
-<div class="flex-shrink-0 w-full md:w-1/2 mb-4 md:mb-0 flex items-center justify-center">
-  <img
-    src="/assets/extra/imagen3.jpg"
-    alt="Servicios Generales Gbriel & Zareli SAC"
-    class="w-full h-auto max-w-xs md:max-w-sm rounded-lg shadow-lg object-cover transition-transform duration-300 hover:scale-105"
-  />
-</div>
+  <div class=" max-w-7xl mx-auto">
+    <!-- Card Empresa -->
+    <div
+      class="flex flex-col lg:flex-row bg-white rounded-xl transition-all duration-500 ease-in-out max-w-6xl mx-auto overflow-hidden">
 
+      <!-- Imagen a la izquierda -->
+      <div class="flex-shrink-0 w-full lg:w-1/2 flex items-center justify-center ">
+        <img src="/assets/extra/imagen3.jpg" alt="Servicios Generales Gabriel & Zareli SAC"
+          class="w-full h-auto max-w-sm rounded-lg shadow-md object-cover transition-transform duration-500 hover:scale-105" />
+      </div>
 
-<!-- Contenido a la derecha -->
-<div class="flex-1 md:ml-6 flex flex-col justify-center space-y-6">
-  <!-- Título principal -->
-  <h3 class="text-4xl font-extrabold text-gray-800 leading-tight tracking-wide"
-      style="font-family: 'Times New Roman', Times, serif">
-    Servicios Generales Gabriel & Zareli SAC
-  </h3>
-  
-  <!-- Descripción -->
-  <p class="text-lg md:text-xl text-gray-600 text-justify leading-relaxed"
-     style="font-family: 'Times New Roman', Times, serif">
-    Somos una empresa peruana líder en la comercialización de materiales de construcción. Con un enfoque en calidad, seguridad y eficiencia, ofrecemos soluciones innovadoras diseñadas para cada uno de nuestros clientes.
-  </p>
+      <!-- Contenido a la derecha -->
+      <div class="flex-1   p-4   flex flex-col justify-center space-y-4 lg:space-y-4">
+        <!-- Título principal -->
+        <h3
+          class="text-3xl text-center sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight tracking-tight animate-fade-in-up">
+          Servicios Generales Gabriel & Zareli SAC
+        </h3>
 
-  <p class="text-lg md:text-xl text-gray-600 text-justify leading-relaxed"
-     style="font-family: 'Times New Roman', Times, serif">
-    A lo largo de los años, hemos crecido gracias a la confianza de nuestros clientes y a un equipo altamente capacitado. Ofrecemos productos de la más alta calidad, respaldados por un servicio al cliente excepcional.
-  </p>
+        <!-- Descripción -->
+        <div class="bg-white">
+          <p class="text-base sm:text-lg lg:text-xl text-justify leading-relaxed max-w-3xl">
+            Somos una empresa peruana líder en la comercialización de materiales de construcción. Nos especializamos en
+            ofrecer soluciones innovadoras, priorizando calidad, seguridad y eficiencia para satisfacer las necesidades
+            únicas de cada cliente.
+          </p>
+          <p class="text-base sm:text-lg lg:text-xl text-justify leading-relaxed max-w-3xl">
+            Con 10 años de experiencia, hemos construido una sólida reputación gracias a la confianza de nuestros
+            clientes y
+            el compromiso de nuestro equipo altamente capacitado. Proveemos productos de primera calidad respaldados por
+            un servicio excepcional.
+          </p>
+        </div>
 
-  <!-- Años de experiencia -->
-  <div class="flex items-center justify-between p-8 border-t-4 border-red-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg shadow-lg">
-    <div class="text-center">
-      <span class="text-6xl text-red-600 font-extrabold tracking-wide drop-shadow-lg"
-            style="font-family: initial">
-        10
-      </span>
-      <h4 class="text-xl md:text-2xl text-gray-800 font-bold mt-2"
-          style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-        Años de experiencia
-      </h4>
+        <!-- Años de experiencia -->
+        <div
+          class="relative bg-white rounded-lg shadow-md p-6 sm:p-8 border-l-4 border-[#ff1010] transform hover:scale-[1.01] transition-transform duration-300">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="text-center  ">
+              <span class="text-5xl sm:text-5xl lg:text-6xl font-extrabold text-[#ff1010] drop-shadow-md">10</span>
+              <h4 class="text-lg sm:text-xl lg:text-xl font-semibold  text-gray-900 mt-1">Años de experiencia</h4>
+            </div>
+            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-md text-center sm:text-left">
+              Nuestra trayectoria nos consolida como líderes en la industria, destacando por nuestra dedicación a la
+              excelencia y la innovación en cada proyecto.
+            </p>
+          </div>
+          <!-- Fondo decorativo -->
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-red-50 to-transparent opacity-20 rounded-lg pointer-events-none">
+          </div>
+        </div>
+      </div>
     </div>
-    <p class="text-gray-600 text-sm md:text-base max-w-md text-left leading-relaxed">
-      Nuestra trayectoria nos posiciona como un referente en la industria, destacando por nuestra dedicación a la excelencia y la innovación en cada proyecto.
-    </p>
-  </div>
-</div>
-
   </div>
 
   <!-- Productos -->
-<!-- Degradado inferior (de rojo a blanco) -->
-  <div class="relative bottom-0 left-0 w-full h-16 bg-gradient-to-t from-red-500 to-white pointer-events-none"></div>
-<div class="relative bg-red-500   mb-0">
+  <!-- Degradado inferior (de rojo a blanco) -->
+  <div class="relative bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#ff1010f6]  to-white pointer-events-none"></div>
+  <div class="relative bg-[#ff1010f6]   mb-0">
     <div class="mx-auto max-w-7xl px-6 pt-1 lg:px-8 pb-4 ">
       <!-- Título centrado -->
-      <h5
-        class="text-center text-4xl font-semibold tracking-tight text-white sm:text-5xl mt-4 sm:mt-6"
-        style="font-family: Georgia, 'Times New Roman', Times, serif"
-      >
+      <h5 class="text-center text-4xl font-semibold tracking-tight text-white sm:text-5xl mt-4 sm:mt-6"
+        style="font-family: Georgia, 'Times New Roman', Times, serif">
         Nuestros Productos
       </h5>
 
       <!-- Contenedor de productos -->
-      <div
-        class="mx-auto mt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-      >
+      <!-- Contenedor de productos -->
+      <div class="mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4">
+
         <!-- Producto 1 -->
-        <article class="flex flex-col bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <div class="relative w-full">
-            <img
-              alt="Cemento_Inka"
-              src="/assets/producto/cemento.jpg"
-              class="w-full h-48 object-contain transition-transform duration-300 transform hover:scale-110 hover:rotate-3d"
-            />
+        <article
+          class="flex flex-col items-center bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="w-full h-48 flex items-center justify-center bg-gray-50">
+            <img alt="Cemento_Inka" src="/assets/producto/cemento.jpg"
+              class="h-full object-contain transition-transform duration-300 transform hover:scale-110" />
           </div>
-          <div class="p-2">
+          <div class="p-4 w-full">
             <h3 class="text-lg text-center font-bold text-gray-800">
               Cemento Ultraresistente
             </h3>
           </div>
         </article>
+
         <!-- Producto 2 -->
         <article
-          class="flex flex-col bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-        >
-          <div class="relative w-full">
-            <img
-              alt="Producto 2"
-              src="/assets/producto/cemento2.jpg"
-              class="w-full h-48 object-contain transition-transform duration-300 transform hover:scale-110 hover:rotate-3d"
-            />
+          class="flex flex-col items-center bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="w-full h-48 flex items-center justify-center bg-gray-50">
+            <img alt="Producto 2" src="/assets/producto/cemento2.jpg"
+              class="h-full object-contain transition-transform duration-300 transform hover:scale-110" />
           </div>
-          <div class="p-2">
+          <div class="p-4 w-full">
             <h3 class="text-lg text-center font-bold text-gray-800">
               Cemento Antisalitre
             </h3>
           </div>
         </article>
+
         <!-- Producto 3 -->
         <article
-          class="flex flex-col bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-        >
-          <div class="relative w-full">
-            <img
-              alt="Producto 3"
-              src="/assets/producto/ladrillo2.jpg"
-              class="w-full h-48 object-contain transition-transform duration-300 transform hover:scale-110 hover:rotate-3d"
-            />
+          class="flex flex-col items-center bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="w-full h-48 flex items-center justify-center bg-gray-50">
+            <img alt="Producto 3" src="/assets/producto/ladrillo2.jpg"
+              class="h-full object-contain transition-transform duration-300 transform hover:scale-110" />
           </div>
-          <div class="p-2">
+          <div class="p-4 w-full">
             <h3 class="text-lg text-center font-bold text-gray-800">
               Ladrillo Tabular
             </h3>
           </div>
         </article>
+
         <!-- Producto 4 -->
         <article
-          class="flex flex-col bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-        >
-          <div class="relative w-full">
-            <img
-              alt="Producto 4"
-              src="/assets/producto/alambre.png"
-              class="w-full h-48 object-contain transition-transform duration-300 transform hover:scale-110 hover:rotate-3d"
-            />
+          class="flex flex-col items-center bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="w-full h-48 flex items-center justify-center bg-gray-50">
+            <img alt="Producto 4" src="/assets/producto/alambre.png"
+              class="h-full object-contain transition-transform duration-300 transform hover:scale-110" />
           </div>
-          <div class="p-2">
+          <div class="p-4 w-full">
             <h3 class="text-lg text-center font-bold text-gray-800">
               Alambre Recocido Nº 16
             </h3>
           </div>
         </article>
-        
       </div>
+
       <!-- Texto adicional y botón -->
       <div class="text-center mt-12">
-        <p
-          class="text-lg text-gray-100 "
-          style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2)"
-        >
+        <p class="text-lg text-gray-100 " style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2)">
           Ofrecemos una amplia variedad de productos de alta calidad para
           satisfacer tus necesidades en construcción.
         </p>
         <div class="mt-6">
-          <a
-            [routerLink]="['/home/producto/fierro/']"
-            class="px-8 py-4 text-black font-semibold bg-white rounded-full shadow-lg hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-red-100 focus:ring-opacity-50 transition duration-300 transform hover:scale-105"
-          >
+          <a [routerLink]="['/home/producto/fierro/']"
+            class="px-8 py-4 text-black font-semibold bg-white rounded-full shadow-lg hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-red-100 focus:ring-opacity-50 transition duration-300 transform hover:scale-105">
             Ver más
           </a>
         </div>
       </div>
     </div>
-      <!-- Degradado inferior (de rojo a blanco) -->
-  <div class="relative bottom-0 left-0 w-full h-16 bg-gradient-to-b from-red-500 to-white pointer-events-none"></div>
+    <!-- Degradado inferior (de rojo a blanco) -->
+    <div class="relative bottom-0 left-0 w-full h-16 bg-gradient-to-b from-[#ff1010f6]  to-white pointer-events-none">
+    </div>
 
-</div>
-  
+  </div>
+
   <!-- Flota Vehicular -->
   <div class="bg-white  ">
     <!-- Contenedor principal -->
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <!-- Contenedor de vehículos -->
-      <div
-        class="mx-auto my-6 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-      >
+      <div class="mx-auto py-6 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         <!-- Imagen 1 -->
         <article class="flex max-w-xl flex-col items-start justify-between">
-          <img
-            alt="Imagen 1"
-            src="/assets/flota/imagenhome.jpg"
-            class="rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105"
-          />
+          <img alt="Imagen 1" src="/assets/flota/imagenhome.jpg"
+            class="rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105" />
         </article>
 
         <!-- Imagen 2 -->
         <article class="flex max-w-xl flex-col items-start justify-between">
-          <img
-            alt="Imagen 2"
-            src="/assets/flota/logistica.jpeg"
-            class="rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105"
-          />
+          <img alt="Imagen 2" src="/assets/flota/logistica.jpeg"
+            class="rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105" />
         </article>
 
         <!-- Texto con botón -->
-        <article
-          class="flex max-w-xl flex-col items-center justify-center text-center"
-        >
+        <article class="flex max-w-xl flex-col items-center justify-center text-center">
           <div class="group relative">
-            <h3
-              class="text-2xl sm:text-3xl font-semibold text-gray-900 group-hover:text-gray-600"
-            >
+            <h3 class="text-2xl sm:text-3xl font-semibold text-gray-900 group-hover:text-gray-600">
               Nuestra flota de vehículos
             </h3>
             <p class="mt-4 text-lg text-gray-800  ">
@@ -297,10 +229,8 @@
               tus necesidades de transporte.
             </p>
             <div class="mt-6 flex justify-center">
-              <a
-                [routerLink]="['/home/flota/']"
-                class="px-8 py-4 text-white font-semibold bg-red-500 rounded-full shadow-lg hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition duration-300 transform hover:scale-105"
-              >
+              <a [routerLink]="['/home/flota/']"
+                class="px-8 py-4 text-white font-semibold bg-red-500 rounded-full shadow-lg hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition duration-300 transform hover:scale-105">
                 Ver más
               </a>
             </div>
@@ -308,74 +238,44 @@
         </article>
       </div>
     </div>
- </div>
+  </div>
 
   <!-- Valores con Accordion -->
-  <div class="bg-gray-100">
-    <div class="bg-gray-100 sm:py-1 mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="bg-gray-100 py-24 sm:py-4">
+  <div class="bg-white w-full">
+    <div class=" w-full sm:py-1 mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="bg-white py-24 sm:py-4">
         <div class="mx-auto max-w-2xl text-center">
-          <h5
-            class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-2xl"
-          >
+          <h5 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-2xl">
             Nuestros Valores
           </h5>
         </div>
 
         <!-- Sección de Accordion -->
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 p-6"
-        >
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 p-6">
           <div *ngFor="let value of values; let i = index">
             <div class="flex flex-col items-center">
               <!-- Botón Accordion con ícono dentro del mismo -->
               <div
-                class="w-full bg-white rounded-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-xl shadow-lg"
-              >
-                <button
-                  (click)="toggleAccordion(i)"
-                  class="flex items-center justify-between w-full p-6 text-left text-gray-800 hover:bg-gray-200 focus:outline-none rounded-lg"
-                >
+                class="w-full bg-white rounded-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-xl shadow-lg">
+                <button (click)="toggleAccordion(i)"
+                  class="flex items-center justify-between w-full p-6 text-left text-gray-800 focus:outline-none rounded-lg">
                   <h5 class="text-1xl font-bold">{{ value.title }}</h5>
                   <!-- Ícono de flecha que cambia dependiendo del estado del Accordion -->
                   <span *ngIf="openedIndex === i; else downArrow">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6 transform rotate-180"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      ></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-180" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                   </span>
                   <ng-template #downArrow>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 15l-7 7-7-7"
-                      ></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7 7-7-7"></path>
                     </svg>
                   </ng-template>
                 </button>
                 <!-- Contenido del Accordion -->
-                <div
-                  *ngIf="openedIndex === i"
-                  class="p-4 text-gray-600 bg-gray-50 rounded-b-lg"
-                >
+                <div *ngIf="openedIndex === i" class="p-4 text-gray-600 bg-white rounded-b-lg">
                   <p>{{ value.description }}</p>
                 </div>
               </div>
@@ -385,4 +285,6 @@
       </div>
     </div>
   </div>
+
+
 </div>
