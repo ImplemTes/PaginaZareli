@@ -1,7 +1,7 @@
 <!-- Página principal (Home ) -->
 <section>
   <!--Carrusel-->
-  <div class="w-full mb-2 relative isolate overflow-hidden bg-gray-900 py-14 sm:py-24 md:py-48 lg:py-60">
+  <div class="w-full mb-2 relative isolate overflow-hidden bg-gray-900 py-14 sm:py-24 md:py-48 lg:py-60 ">
     <div class="w-full  absolute inset-0 -z-10">
 
       <img *ngFor="let image of images; let i = index" [src]="image.src" alt="image"
@@ -51,62 +51,71 @@
   </div>
 
 
-  <!-- Card Empresa -->
-  <div class=" max-w-7xl mx-auto">
-    <!-- Card Empresa -->
-    <div
-      class="flex flex-col lg:flex-row bg-white rounded-xl transition-all duration-500 ease-in-out max-w-6xl mx-auto overflow-hidden">
-
-      <!-- Imagen a la izquierda -->
-      <div class="flex-shrink-0 w-full lg:w-1/2 flex items-center justify-center p-5">
-        <img src="/assets/extra/imagen3.jpg" alt="Servicios Generales Gabriel & Zareli SAC"
-          class="w-full h-auto max-w-sm rounded-lg shadow-md object-cover transition-transform duration-500 hover:scale-105" />
+<!-- Card Empresa Mejorada -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="bg-white rounded-xl   overflow-hidden transition-all duration-300 ease-in-out ">
+    <div class="flex flex-col lg:flex-row">
+      <!-- Imagen con proporción equilibrada -->
+      <div class="lg:w-1/2 w-full flex items-center justify-center p-4 lg:p-6">
+        <div class="relative max-w-md w-full">
+          <img 
+            src="/assets/extra/imagen3.jpg" 
+            alt="Servicios Generales Gabriel & Zareli SAC"
+            class="w-full h-72 object-cover rounded-lg shadow-md transition-transform duration-500 hover:scale-105"
+          />
+        </div>
       </div>
-
-      <!-- Contenido a la derecha -->
-      <div class="flex-1   p-4   flex flex-col justify-center space-y-4 lg:space-y-4">
-        <!-- Título principal -->
-        <h3
-          class="text-3xl text-center sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight tracking-tight animate-fade-in-up">
-          Servicios Generales Gabriel & Zareli S.A.C.
-        </h3>
-
-        <!-- Descripción -->
-        <div class="bg-white pl-4 pr-4">
-          <p class="text-base sm:text-lg lg:text-xl text-justify leading-relaxed max-w-3xl">
-            Somos una empresa peruana líder en la comercialización de materiales de construcción. Nos especializamos en
-            ofrecer soluciones innovadoras, priorizando calidad, seguridad y eficiencia para satisfacer las necesidades
-            únicas de cada cliente.
+      
+      <!-- Contenido equilibrado -->
+      <div class="lg:w-1/2 w-full p-6 lg:p-8 flex flex-col justify-center">
+        
+        <!-- Título más proporcionado -->
+        <div class="mb-6">
+          <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight   text-center lg:text-left">
+            Servicios Generales 
+            <span class="text-[#000000] block">Gabriel & Zareli S.A.C.</span>
+          </h3>
+        </div>
+        
+        <!-- Descripción más legible -->
+        <div class="space-y-4 mb-6">
+          <p class="text-base lg:text-lg text-gray-700 leading-relaxed text-justify">
+            Somos una empresa peruana líder en la comercialización de materiales de construcción. 
+            Nos especializamos en ofrecer <span class="font-semibold text-gray-900">soluciones innovadoras</span>, 
+            priorizando calidad, seguridad y eficiencia para satisfacer las necesidades únicas de cada cliente.
           </p>
-          <p class="text-base sm:text-lg lg:text-xl text-justify leading-relaxed max-w-3xl">
-            Con 10 años de experiencia, hemos construido una sólida reputación gracias a la confianza de nuestros
-            clientes y
-            el compromiso de nuestro equipo altamente capacitado. Proveemos productos de primera calidad respaldados por
-            un servicio excepcional.
+          
+          <p class="text-base lg:text-lg text-gray-700 leading-relaxed text-justify">
+            Con  10 años de experiencia, hemos construido una sólida 
+            reputación gracias a la confianza de nuestros clientes y el compromiso de nuestro equipo altamente capacitado. 
+            Proveemos productos de primera calidad respaldados por un servicio excepcional.
           </p>
         </div>
-
-        <!-- Años de experiencia -->
-        <div
-          class="relative bg-white rounded-lg shadow-md p-6 sm:p-8 border-l-4 border-[#ff1010] transform hover:scale-[1.01] transition-transform duration-300">
-          <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="text-center  ">
-              <span class="text-5xl sm:text-5xl lg:text-6xl font-extrabold text-[#ff1010] drop-shadow-md">10</span>
-              <h4 class="text-lg sm:text-xl lg:text-xl font-semibold  text-gray-900 mt-1">Años de experiencia</h4>
+        
+        <!-- Sección de experiencia más compacta -->
+        <div class="bg-gray-50 rounded-lg shadow-sm p-6 border-l-4 border-[#ff1010] hover:shadow-md transition-shadow duration-300">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <!-- Número de años -->
+            <div class="text-center sm:text-center">
+              <span class="text-5xl lg:text-6xl text-center font-extrabold text-[#ff1010] drop-shadow-sm">10</span>
+              <h4 class="text-lg lg:text-xl font-semibold text-gray-900 mt-1">Años de experiencia</h4>
             </div>
-            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-md text-center sm:text-left">
-              Nuestra trayectoria nos consolida como líderes en la industria, destacando por nuestra dedicación a la
-              excelencia y la innovación en cada proyecto.
-            </p>
-          </div>
-          <!-- Fondo decorativo -->
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-red-50 to-transparent opacity-20 rounded-lg pointer-events-none">
+            
+            <!-- Descripción -->
+            <div class="flex-1 max-w-sm">
+              <p class="text-sm lg:text-base text-gray-600 leading-relaxed text-center sm:text-left">
+                Nuestra trayectoria nos consolida como líderes en la industria, destacando por nuestra 
+                dedicación a la excelencia y la innovación.
+              </p>
+            </div>
           </div>
         </div>
+        
       </div>
     </div>
   </div>
+</div>
 
   <!-- Productos -->
   <!-- Degradado inferior (de rojo a blanco) -->
@@ -121,64 +130,41 @@
       </h5>
 
       <!-- Contenedor de productos -->
-      <!-- Contenedor de productos -->
       <div class="mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4">
 
         <!-- Producto 1 -->
         <article
-          class="flex flex-col items-center bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <div class="w-full h-48 flex items-center justify-center bg-gray-50">
-            <img alt="Cemento_Inka" src="/assets/producto/cemento.jpg"
-              class="h-full object-contain transition-transform duration-300 transform hover:scale-110" />
-          </div>
-          <div class="p-4 w-full">
-            <h3 class="text-lg text-center font-bold text-gray-800">
-              Cemento Ultraresistente
-            </h3>
-          </div>
+          class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
+          <img alt="Producto 1" src="/assets/producto/cemento.jpg"
+            class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
+          <h3 class="text-lg font-bold text-gray-800">Cemento Inka - Ultra Resistente</h3>
         </article>
+
 
         <!-- Producto 2 -->
         <article
-          class="flex flex-col items-center bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <div class="w-full h-48 flex items-center justify-center bg-gray-50">
-            <img alt="Producto 2" src="/assets/producto/cemento2.jpg"
-              class="h-full object-contain transition-transform duration-300 transform hover:scale-110" />
-          </div>
-          <div class="p-4 w-full">
-            <h3 class="text-lg text-center font-bold text-gray-800">
-              Cemento Antisalitre
-            </h3>
-          </div>
+          class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
+          <img alt="Producto 1" src="/assets/producto/cemento2.jpg"
+            class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-110" />
+          <h3 class="text-lg font-bold text-gray-800">Cemento Inka - Antisalitre</h3>
         </article>
 
         <!-- Producto 3 -->
         <article
-          class="flex flex-col items-center bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <div class="w-full h-48 flex items-center justify-center bg-gray-50">
-            <img alt="Producto 3" src="/assets/producto/ladrillo2.jpg"
-              class="h-full object-contain transition-transform duration-300 transform hover:scale-110" />
-          </div>
-          <div class="p-4 w-full">
-            <h3 class="text-lg text-center font-bold text-gray-800">
-              Ladrillo Tabular
-            </h3>
-          </div>
+          class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
+          <img alt="Producto 1" src="/assets/producto/ladrillo2.jpg"
+            class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-110" />
+          <h3 class="text-lg font-bold text-gray-800">Ladrillo Tabular</h3>
         </article>
 
         <!-- Producto 4 -->
-        <article
-          class="flex flex-col items-center bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <div class="w-full h-48 flex items-center justify-center bg-gray-50">
-            <img alt="Producto 4" src="/assets/producto/alambre.png"
-              class="h-full object-contain transition-transform duration-300 transform hover:scale-110" />
-          </div>
-          <div class="p-4 w-full">
-            <h3 class="text-lg text-center font-bold text-gray-800">
-              Alambre Recocido Nº 16
-            </h3>
-          </div>
+          <article
+          class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
+          <img alt="Producto 1" src="/assets/producto/alambre.png"
+            class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-110" />
+          <h3 class="text-lg font-bold text-gray-800">Alambre Recocido Nº 16</h3>
         </article>
+ 
       </div>
 
       <!-- Texto adicional y botón -->
@@ -203,42 +189,36 @@
 
   <!-- Flota Vehicular -->
 <div class="bg-white py-4">
-  
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto   grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl">
-      
-      <!-- Imagen 1 -->
-      <article class="flex flex-col items-center justify-center">
-        <img
-          alt="Imagen 1"
-          src="/assets/flota/imagenhome.jpg"
-          class="rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 w-full max-w-[350px] sm:max-w-[300px] lg:max-w-[350px] object-cover"
-        />
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-12">
+
+      <!-- Imagen 1: segunda en móvil, primera en desktop -->
+      <article class="order-2 lg:order-1 flex flex-col items-center justify-center">
+        <img alt="Imagen 1" src="/assets/flota/imagenhome.jpg"
+          class="rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 w-full max-w-[350px] object-cover" />
       </article>
 
-      <!-- Imagen 2 -->
-      <article class="flex flex-col items-center justify-center">
-        <img
-          alt="Imagen 2"
-          src="/assets/flota/logistica.jpeg"
-          class="rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 w-full max-w-[350px] sm:max-w-[300px] lg:max-w-[350px] object-cover"
-        />
+      <!-- Imagen 2: tercera en móvil, segunda en desktop -->
+      <article class="order-3 lg:order-2 flex flex-col items-center justify-center">
+        <img alt="Imagen 2" src="/assets/flota/logistica.jpeg"
+          class="rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 w-full max-w-[350px] object-cover" />
       </article>
 
-      <!-- Texto con botón -->
-      <article class="flex flex-col items-center justify-center text-center px-4 sm:col-span-2 sm:justify-self-center lg:col-span-1">
+      <!-- Texto: primero en móvil, último en desktop -->
+      <article
+        class="order-1 lg:order-3 flex flex-col items-center justify-center text-center px-4">
         <div class="group relative">
-          <h3 class="text-2xl sm:text-3xl font-semibold text-gray-900 group-hover:text-gray-600">
+          <h3 class="text-center text-2xl font-semibold tracking-tight text-gray-900 sm:text-4xl mt-4 sm:mt-6"
+            style="font-family: Georgia, 'Times New Roman', Times, serif">
             Nuestra flota de vehículos
           </h3>
+
           <p class="mt-4 text-base sm:text-lg text-gray-800">
             Contamos con una flota moderna y eficiente para satisfacer todas tus necesidades de transporte.
           </p>
-          <div class="mt-6">
-            <a
-              [routerLink]="['/home/flota/']"
-              class="inline-block px-6 py-3 sm:px-8 sm:py-4 text-white font-semibold bg-red-500 rounded-full shadow-lg hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition duration-300 hover:scale-105"
-            >
+          <div class="mt-3">
+            <a [routerLink]="['/home/flota/']"
+              class="inline-block px-6 py-3 sm:px-8 sm:py-4 text-white font-semibold bg-red-500 rounded-full shadow-lg hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition duration-300 hover:scale-105">
               Ver más
             </a>
           </div>
@@ -248,16 +228,18 @@
     </div>
   </div>
 </div>
+
+
   <!-- Valores con Accordion -->
   <div class="bg-white w-full">
 
     <div class=" w-full sm:py-1 mx-auto max-w-7xl px-6 lg:px-8">
       <div class="bg-white py-4 sm:py-4">
         <div class="mx-auto max-w-2xl text-center">
-                <h5 class="text-center text-2xl font-semibold tracking-tight text-gray-900 sm:text-4xl mt-4 sm:mt-6"
-        style="font-family: Georgia, 'Times New Roman', Times, serif">
-        Nuestros Valores
-      </h5>
+          <h5 class="text-center text-2xl font-semibold tracking-tight text-gray-900 sm:text-4xl mt-4 sm:mt-6"
+            style="font-family: Georgia, 'Times New Roman', Times, serif">
+            Nuestros Valores
+          </h5>
         </div>
 
         <!-- Sección de Accordion -->
@@ -295,35 +277,35 @@
       </div>
     </div>
   </div>
- <hr class="border-t-2 border-gray-200   w-full" />
-<div class="w-full max-w-7xl mx-auto px-4">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-    <!-- Columna 1 -->
-    <div class=" p-4 rounded-xl flex flex-col items-center">
-      <div class="flex flex-col items-center space-y-2">
-        <img src="https://img.icons8.com/office/48/shop.png" alt="Recojo en tienda" class="w-16 h-16" />
-        <p class="text-lg font-medium text-gray-800">Recojo en tienda <b class="text-red-600">></b></p>
+  <hr class="border-t-2 border-gray-200   w-full" />
+  <div class="w-full max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <!-- Columna 1 -->
+      <div class=" p-4 rounded-xl flex flex-col items-center">
+        <div class="flex flex-col items-center space-y-2">
+          <img src="https://img.icons8.com/office/48/shop.png" alt="Recojo en tienda" class="w-16 h-16" />
+          <p class="text-lg font-medium text-gray-800">Recojo en tienda <b class="text-red-600">></b></p>
+        </div>
       </div>
-    </div>
 
-    <!-- Columna 2 -->
-    <div class="p-4 rounded-xl flex flex-col items-center">
-      <div class="flex flex-col items-center space-y-2">
-        <img src="https://img.icons8.com/color/48/delivery--v1.png" alt="Entrega programada" class="w-16 h-16" />
-        <p class="text-lg font-medium text-gray-800">Entrega Programada  <b class="text-red-600">></b></p>
+      <!-- Columna 2 -->
+      <div class="p-4 rounded-xl flex flex-col items-center">
+        <div class="flex flex-col items-center space-y-2">
+          <img src="https://img.icons8.com/color/48/delivery--v1.png" alt="Entrega programada" class="w-16 h-16" />
+          <p class="text-lg font-medium text-gray-800">Entrega Programada <b class="text-red-600">></b></p>
+        </div>
       </div>
-    </div>
 
-    <!-- Columna 3 -->
-    <div class=" p-4 rounded-xl  flex flex-col items-center">
-      <div class="flex flex-col items-center space-y-2">
-        <img src="https://img.icons8.com/arcade/64/online-payment-.png" alt="Método de pago" class="w-16 h-16" />
-        <p class="text-lg font-medium text-gray-800">Métodos de Pago  <b class="text-red-600">></b></p>
+      <!-- Columna 3 -->
+      <div class=" p-4 rounded-xl  flex flex-col items-center">
+        <div class="flex flex-col items-center space-y-2">
+          <img src="https://img.icons8.com/arcade/64/online-payment-.png" alt="Método de pago" class="w-16 h-16" />
+          <p class="text-lg font-medium text-gray-800">Métodos de Pago <b class="text-red-600">></b></p>
+        </div>
       </div>
-    </div>
 
+    </div>
   </div>
-</div>
 
 
 </section>
