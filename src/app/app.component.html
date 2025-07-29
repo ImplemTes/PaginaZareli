@@ -97,72 +97,71 @@
             <a [routerLink]="['/home/']" class="text-gray-600 hover:text-[#ff3030] font-medium">Inicio</a>
             <a [routerLink]="['/home/nosotros/']" class="text-gray-600 hover:text-[#ff3030] font-medium">Nosotros</a>
 
-<!-- Menú Productos -->
-<div class="relative" (click)="toggleMenu2($event)">
-  <!-- Título principal con ícono -->
-<span class="flex items-center text-gray-600 hover:text-[#ff3030] font-medium cursor-pointer">
-  Productos
-  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1 transition-transform duration-200"
-       fill="none" viewBox="0 0 24 24" stroke="currentColor"
-       [class.rotate-180]="menuVisible">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-  </svg>
-</span>
+            <!-- Menú Productos -->
+            <div class="relative" (click)="toggleMenu2($event)">
+              <!-- Título principal con ícono -->
+              <span class="flex items-center text-gray-600 hover:text-[#ff3030] font-medium cursor-pointer">
+                Productos
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1 transition-transform duration-200"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" [class.rotate-180]="menuVisible">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
 
-<!-- Menú desplegable -->
-<div 
-  class="absolute left-0 bg-white shadow-lg rounded-md mt-2 z-50 p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 min-w-[360px] max-w-[480px] w-full "
-  [ngClass]="{'hidden': !menuVisible}">
-  
-  <!-- Columna 1 -->
-  <div class="flex flex-col space-y-2">
-    <a [routerLink]="['/home/producto/cemento']"
-       class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-600 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
-      Cemento
-    </a>
-  </div>
+              <!-- Menú desplegable -->
+              <div
+                class="absolute left-0 bg-white shadow-lg rounded-md mt-2 z-50 p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 min-w-[360px] max-w-[480px] w-full "
+                [ngClass]="{'hidden': !menuVisible}">
 
-  <!-- Columna 2 -->
-  <div class="flex flex-col space-y-2">
-    <a [routerLink]="['/home/producto/fierro']"
-       class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-500 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
-      Fierro
-    </a>
-  </div>
+                <!-- Columna 1 -->
+                <div class="flex flex-col space-y-2">
+                  <a [routerLink]="['/home/producto/cemento']"
+                    class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-600 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
+                    Cemento
+                  </a>
+                </div>
 
-  <!-- Columna 3 -->
-  <div class="flex flex-col space-y-2">
-    <a [routerLink]="['/home/producto/ladrillo']"
-       class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-500 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
-      Ladrillo
-    </a>
-  </div>
+                <!-- Columna 2 -->
+                <div class="flex flex-col space-y-2">
+                  <a [routerLink]="['/home/producto/fierro']"
+                    class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-500 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
+                    Fierro
+                  </a>
+                </div>
 
-  <!-- Columna 4 -->
-  <div class="flex flex-col space-y-2">
-    <a [routerLink]="['/home/producto/tubo']"
-       class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-500 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
-      Tubo
-    </a>
-  </div>
+                <!-- Columna 3 -->
+                <div class="flex flex-col space-y-2">
+                  <a [routerLink]="['/home/producto/ladrillo']"
+                    class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-500 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
+                    Ladrillo
+                  </a>
+                </div>
 
-  <!-- Columna 5 -->
-  <div class="flex flex-col space-y-2">
-    <a [routerLink]="['/home/producto/hierro']"
-       class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-500 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
-      Hierro
-    </a>
-  </div>
+                <!-- Columna 4 -->
+                <div class="flex flex-col space-y-2">
+                  <a [routerLink]="['/home/producto/tubo']"
+                    class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-500 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
+                    Tubo
+                  </a>
+                </div>
 
-  <!-- Columna 6 -->
-  <div class="flex flex-col space-y-2">
-    <a [routerLink]="['/home/producto/cal']"
-       class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-500 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
-      Cal
-    </a>
-  </div>
-</div>
-</div>
+                <!-- Columna 5 -->
+                <div class="flex flex-col space-y-2">
+                  <a [routerLink]="['/home/producto/hierro']"
+                    class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-500 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
+                    Hierro
+                  </a>
+                </div>
+
+                <!-- Columna 6 -->
+                <div class="flex flex-col space-y-2">
+                  <a [routerLink]="['/home/producto/cal']"
+                    class="text-gray-800 hover:bg-gray-100 font-semibold hover:text-red-500 rounded-md py-3 px-4 transition-colors duration-200 text-center truncate">
+                    Cal
+                  </a>
+                </div>
+              </div>
+            </div>
 
             <a [routerLink]="['/home/flota/']" class="text-gray-600 hover:text-red-500 font-medium">Nuestra Flota</a>
             <a [routerLink]="['/home/contacto/']" class="text-gray-600 hover:text-red-500 font-medium">Contáctenos</a>
@@ -213,15 +212,14 @@
   <section>
     <!-- Aquí se cargará el contenido dinámico de las rutas -->
     <router-outlet></router-outlet>
-  <!-- Ícono flotante de WhatsApp -->
-  <a href="https://wa.me/928378678?text=Me%20gustaría%20recibir%20información%20sobre%20los%20materiales%20de%20construcción."
-    target="_blank"
-    class="whatsapp">
-    <i class="fab fa-whatsapp whatsapp-icon"></i>
-  </a>
+    <!-- Ícono flotante de WhatsApp -->
+    <a href="https://wa.me/928378678?text=Me%20gustaría%20recibir%20información%20sobre%20los%20materiales%20de%20construcción."
+      target="_blank" class="whatsapp">
+      <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
   </section>
 
- 
+
 
 
 

@@ -7,42 +7,58 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  isMenuOpen = false;  
-  isSubmenuOpen = false; 
-  images = [
-    {
-      src: '/assets/carrusel/imagen1.jpg'
-    },
-    {
-      src: '/assets/carrusel/imagen4.jpg'
-    },
-    {
-      src: '/assets/carrusel/imagen3.jpg'
-    }
-  ];
+  isMenuOpen = false;
+  isSubmenuOpen = false;
   currentIndex: number = 0;
+images = [
+  {
+    desktop: '/assets/carrusel/imagenordenador2.jpg',
+    mobile: '/assets/carrusel/imagenmovil2.png'
+  },
+  {
+    desktop: '/assets/carrusel/imagenordenador3.jpg',
+    mobile: '/assets/carrusel/imagenmovil3.png'
+  },
+    {
+    desktop: '/assets/carrusel/imagenordenador4.jpg',
+    mobile: '/assets/carrusel/imagenmovil4.png'
+  },
+      {
+    desktop: '/assets/carrusel/imagenordenador5.jpg',
+    mobile: '/assets/carrusel/imagenmovil5.png'
+  }
+];
+
   interval: any;
 
- 
+
   ngOnInit(): void {
     this.startCarousel();
-  setInterval(() => this.nextSlide(), 3000); // cada 3s/ cada 3s
+    setInterval(() => this.nextSlide(), 3000); // cada 3s/ cada 3s
   }
 
   startCarousel() {
     this.interval = setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
-    }, 6000);  
+    }, 6000);
   }
 
   goToNext() {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
+      console.log('Siguiente - Índice actual:', this.currentIndex);
   }
 
   goToPrevious() {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+     console.log('Anterior - Índice actual:', this.currentIndex); 
   }
 
+
+
+
+
+
+  
   ngOnDestroy(): void {
     if (this.interval) {
       clearInterval(this.interval);
@@ -83,7 +99,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       description:
         'Nos comprometemos con la ética y la responsabilidad en cada proyecto, respetando el medio ambiente y cumpliendo nuestras promesas con los clientes.',
     },
-        {
+    {
       title: 'Compromiso',
       description:
         'Compromiso con nuestros clientes, empleados y la sociedad. Nos dedicamos a cumplir nuestras promesas y garantizar que cada proyecto sea realizado con la máxima dedicación.',
@@ -97,9 +113,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.openedIndex = this.openedIndex === index ? null : index;
   }
 
-
-
-
   images_colaboradores = [
     '/assets/producto/cemento.jpg',
     '/assets/producto/cemento2.jpg',
@@ -110,7 +123,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     '/assets/producto/cemento3.jpg',
 
   ];
-  
+
   visibleCount = 7; // Puedes cambiar a 3, 5, 6, etc. según lo que quieras mostrar a la vez
   currentIndex2 = 0;
   transitioning2 = false;
