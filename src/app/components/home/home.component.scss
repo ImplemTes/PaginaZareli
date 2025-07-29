@@ -25,5 +25,15 @@
 }
   
 
+.wrap {
+  display: flex;
+  transition: transform 0.8s ease;
+}
 
+.wrap img {
 
+  object-fit: cover;
+  border-radius: 10px;
+  padding: 0 8px;
+  flex-shrink: 0;
+}

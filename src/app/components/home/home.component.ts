@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
  
   ngOnInit(): void {
     this.startCarousel();
+  setInterval(() => this.nextSlide(), 3000); // cada 3s/ cada 3s
   }
 
   startCarousel() {
@@ -95,4 +96,38 @@ export class HomeComponent implements OnInit, OnDestroy {
     // Si el índice está abierto, lo cerramos, sino lo abrimos
     this.openedIndex = this.openedIndex === index ? null : index;
   }
+
+
+
+
+  images_colaboradores = [
+    '/assets/producto/cemento.jpg',
+    '/assets/producto/cemento2.jpg',
+    '/assets/producto/cemento3.jpg',
+    '/assets/producto/cemento2.jpg',
+    '/assets/producto/cemento3.jpg',
+    '/assets/producto/cemento2.jpg',
+    '/assets/producto/cemento3.jpg',
+
+  ];
+  
+  visibleCount = 7; // Puedes cambiar a 3, 5, 6, etc. según lo que quieras mostrar a la vez
+  currentIndex2 = 0;
+  transitioning2 = false;
+  nextSlide() {
+    if (this.transitioning2) return;
+    this.transitioning2 = true;
+    this.currentIndex2++;
+
+    // Esperamos a que termine la animación CSS (~500ms)
+    setTimeout(() => {
+      const first = this.images_colaboradores.shift();
+      if (first) this.images_colaboradores.push(first);
+      this.currentIndex2 = 0;
+      this.transitioning2 = false;
+    }, 500);
+  }
+
+
+
 }
