@@ -114,14 +114,17 @@ images = [
   }
 
   images_colaboradores = [
-    '/assets/producto/cemento.jpg',
-    '/assets/producto/cemento2.jpg',
-    '/assets/producto/cemento3.jpg',
-    '/assets/producto/cemento2.jpg',
-    '/assets/producto/cemento3.jpg',
-    '/assets/producto/cemento2.jpg',
-    '/assets/producto/cemento3.jpg',
-
+    '/assets/empresas/empresa1.png',
+    '/assets/empresas/empresa2.png',
+    '/assets/empresas/empresa3.png',
+    '/assets/empresas/empresa4.png',
+    '/assets/empresas/empresa5.png',
+    '/assets/empresas/empresa6.png',
+    '/assets/empresas/empresa7.png',
+    '/assets/empresas/empresa8.png',
+    '/assets/empresas/empresa9.png',
+    '/assets/empresas/empresa10.png',
+     '/assets/empresas/empresa11.png',
   ];
 
   visibleCount = 7; // Puedes cambiar a 3, 5, 6, etc. según lo que quieras mostrar a la vez
