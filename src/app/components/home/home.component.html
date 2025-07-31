@@ -73,14 +73,14 @@
 
           <!-- Imagen con proporción equilibrada -->
           <div class="lg:w-1/2 w-full flex items-center justify-center p-4 lg:p-6">
-            <div class="relative max-w-md w-full">
+            <div class="relative max-w-sm  lg:p-0 p-5 md:p-4  w-full">
               <img src="/assets/extra/imagen3.jpg" alt="Servicios Generales Gabriel & Zareli SAC"
-                class="w-full h-72 object-cover rounded-lg shadow-md transition-transform duration-500 hover:scale-105" />
+                class="w-full h-auto object-cover rounded-lg shadow-md transition-transform duration-500 hover:scale-105" />
             </div>
           </div>
 
           <!-- Contenido equilibrado -->
-          <div class="lg:w-1/2 w-full p-6 lg:p-8 flex flex-col justify-center">
+          <div class="lg:w-1/2 w-full pb-6 lg:p-8 flex flex-col justify-center">
 
             <!-- Título más proporcionado -->
             <div class="mb-6">
@@ -112,7 +112,7 @@
               <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
 
                 <!-- Número de años -->
-                <div class="text-center sm:text-center">
+                <div class="flex-1 text-center">
                   <span class="text-5xl lg:text-6xl text-center font-extrabold text-[#ff1010] drop-shadow-sm">10</span>
                   <h4 class="text-lg lg:text-xl font-semibold text-gray-900 mt-1">Años de experiencia</h4>
                 </div>
@@ -198,87 +198,98 @@
 
   </div>
 
-  <!-- Flota Vehicular -->
-  <div class="bg-white py-4">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-12">
+  <div class="w-full h-auto  bg-[url('/assets/carrusel/fondo2.png')]   sm:bg-[url('/assets/carrusel/fondo33.png')]  bg-cover bg-center bg-no-repeat ">
 
-        <!-- Imagen 1: segunda en móvil, primera en desktop -->
-        <article class="order-2 lg:order-1 flex flex-col items-center justify-center">
-          <img alt="Imagen 1" src="/assets/flota/imagenhome.jpg"
-            class="rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 w-full max-w-[350px] object-cover" />
-        </article>
+    <!-- Flota Vehicular -->
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 ">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-12">
 
-        <!-- Imagen 2: tercera en móvil, segunda en desktop -->
-        <article class="order-3 lg:order-2 flex flex-col items-center justify-center">
-          <img alt="Imagen 2" src="/assets/flota/logistica.jpeg"
-            class="rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 w-full max-w-[350px] object-cover" />
-        </article>
-
-        <!-- Texto: primero en móvil, último en desktop -->
-        <article class="order-1 lg:order-3 flex flex-col items-center justify-center text-center px-4">
-          <div class="group relative">
-            <h3 class="text-center text-2xl font-semibold tracking-tight text-gray-900 sm:text-4xl mt-4 sm:mt-6"
-              style="font-family: Georgia, 'Times New Roman', Times, serif">
-              Nuestra flota de vehículos
-            </h3>
-
-            <p class="mt-4 text-base sm:text-lg text-gray-800">
-              Contamos con una flota moderna y eficiente para satisfacer todas tus necesidades de transporte.
-            </p>
-            <div class="mt-3">
-              <a [routerLink]="['/home/flota/']"
-                class="inline-block px-6 py-3 sm:px-8 sm:py-4 text-white font-semibold bg-red-500 rounded-full shadow-lg hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition duration-300 hover:scale-105">
-                Ver más
-              </a>
-            </div>
+      <!-- Texto: primero en todas las vistas -->
+      <article class="order-1 lg:order-3 flex flex-col items-center justify-center text-center px-4">
+        <div class="group relative">
+          <h3 class="text-center text-2xl font-semibold tracking-tight text-gray-900 sm:text-4xl mt-4 sm:mt-6"
+            style="font-family: Georgia, 'Times New Roman', Times, serif">
+            Nuestra flota de vehículos
+          </h3>
+          <p class="mt-4 text-base sm:text-lg text-gray-800">
+            Contamos con una flota moderna y eficiente para satisfacer todas tus necesidades de transporte.
+          </p>
+          <div class="mt-3">
+            <a [routerLink]="['/home/flota/']"
+              class="inline-block px-6 py-3 sm:px-8 sm:py-4 text-white font-semibold bg-red-500 rounded-full shadow-lg hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-red-400 focus:ring-opacity-50 transition duration-300 hover:scale-105">
+              Ver más
+            </a>
           </div>
-        </article>
+        </div>
+      </article>
 
+      <!-- Contenedor de imágenes para móviles y md -->
+      <div class="order-2 lg:hidden flex flex-col items-center gap-6 md:flex-row md:justify-center">
+        <!-- Imagen 1 -->
+        <img src="/assets/flota/imagenhome.jpg" alt="Imagen 1"
+          class="rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 w-full max-w-[350px] object-cover" />
+        <!-- Imagen 2 -->
+        <img src="/assets/flota/logistica.jpeg" alt="Imagen 2"
+          class="rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 w-full max-w-[350px] object-cover" />
       </div>
+
+      <!-- Imagenes para pantallas grandes -->
+      <article class="order-3 lg:order-1 hidden lg:flex flex-col items-center justify-center">
+        <img src="/assets/flota/imagenhome.jpg" alt="Imagen 1"
+          class="rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 w-full max-w-[350px] object-cover" />
+      </article>
+
+      <article class="order-4 lg:order-2 hidden lg:flex flex-col items-center justify-center">
+        <img src="/assets/flota/logistica.jpeg" alt="Imagen 2"
+          class="rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 w-full max-w-[350px] object-cover" />
+      </article>
+
     </div>
   </div>
 
 
-  <!-- Valores con Accordion -->
-  <div class="bg-white w-full">
 
-    <div class=" w-full sm:py-1 mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="bg-white py-4 sm:py-4">
-        <div class="mx-auto max-w-2xl text-center">
-          <h5 class="text-center text-2xl font-semibold tracking-tight text-gray-900 sm:text-4xl mt-4 sm:mt-6"
-            style="font-family: Georgia, 'Times New Roman', Times, serif">
-            Nuestros Valores
-          </h5>
-        </div>
 
-        <!-- Sección de Accordion -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 p-6">
-          <div *ngFor="let value of values; let i = index">
-            <div class="flex flex-col items-center">
-              <!-- Botón Accordion con ícono dentro del mismo -->
-              <div
-                class="w-full bg-white rounded-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-xl shadow-lg">
-                <button (click)="toggleAccordion(i)"
-                  class="flex items-center justify-between w-full p-6 text-left text-gray-800 focus:outline-none rounded-lg">
-                  <h5 class="text-1xl font-bold">{{ value.title }}</h5>
-                  <!-- Ícono de flecha que cambia dependiendo del estado del Accordion -->
-                  <span *ngIf="openedIndex === i; else downArrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-180" fill="none"
-                      viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                  </span>
-                  <ng-template #downArrow>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                      stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7 7-7-7"></path>
-                    </svg>
-                  </ng-template>
-                </button>
-                <!-- Contenido del Accordion -->
-                <div *ngIf="openedIndex === i" class="p-4 text-gray-600 bg-white rounded-b-lg">
-                  <p>{{ value.description }}</p>
+    <!-- Valores con Accordion -->
+    <div class="  w-full ">
+
+      <div class=" w-full sm:py-1 mx-auto max-w-7xl px-6 lg:px-8">
+        <div class=" py-2 sm:py-2">
+          <div class="mx-auto max-w-2xl text-center">
+            <h5 class="text-center text-2xl font-semibold tracking-tight text-gray-900 sm:text-4xl  "
+              style="font-family: Georgia, 'Times New Roman', Times, serif">
+              Nuestros Valores
+            </h5>
+          </div>
+
+          <!-- Sección de Accordion -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 p-6">
+            <div *ngFor="let value of values; let i = index">
+              <div class="flex flex-col items-center">
+                <!-- Botón Accordion con ícono dentro del mismo -->
+                <div
+                  class="w-full bg-white rounded-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-xl shadow-lg">
+                  <button (click)="toggleAccordion(i)"
+                    class="flex items-center justify-between w-full p-6 text-left text-gray-800 focus:outline-none rounded-lg">
+                    <h5 class="text-1xl font-bold">{{ value.title }}</h5>
+                    <!-- Ícono de flecha que cambia dependiendo del estado del Accordion -->
+                    <span *ngIf="openedIndex === i; else downArrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-180" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </span>
+                    <ng-template #downArrow>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7 7-7-7"></path>
+                      </svg>
+                    </ng-template>
+                  </button>
+                  <!-- Contenido del Accordion -->
+                  <div *ngIf="openedIndex === i" class="p-4 text-gray-600 bg-white rounded-b-lg">
+                    <p>{{ value.description }}</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -286,44 +297,18 @@
         </div>
       </div>
     </div>
-  </div>
+ 
+
   <hr class="border-t-2 border-gray-200 w-full" />
-  <div class="w-full max-w-7xl mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-      <!-- Columna 1 -->
-      <div class=" p-4 rounded-xl flex flex-col items-center">
-        <div class="flex flex-col items-center space-y-2">
-          <img src="https://img.icons8.com/office/48/shop.png" alt="Recojo en tienda" class="w-16 h-16" />
-          <p class="text-lg font-medium text-gray-800">Recojo en tienda <b class="text-red-600">></b></p>
-        </div>
-      </div>
-
-      <!-- Columna 2 -->
-      <div class="p-4 rounded-xl flex flex-col items-center">
-        <div class="flex flex-col items-center space-y-2">
-          <img src="https://img.icons8.com/color/48/delivery--v1.png" alt="Entrega programada" class="w-16 h-16" />
-          <p class="text-lg font-medium text-gray-800">Entrega Programada <b class="text-red-600">></b></p>
-        </div>
-      </div>
-
-      <!-- Columna 3 -->
-      <div class=" p-4 rounded-xl  flex flex-col items-center">
-        <div class="flex flex-col items-center space-y-2">
-          <img src="https://img.icons8.com/arcade/64/online-payment-.png" alt="Método de pago" class="w-16 h-16" />
-          <p class="text-lg font-medium text-gray-800">Métodos de Pago <b class="text-red-600">></b></p>
-        </div>
-      </div>
-
-    </div>
-  </div>
+ 
 
   <hr class="border-t-2 border-gray-200   w-full" />
-  <div class="contenini w-full overflow-hidden">
+  <div class="bg-white contenini w-full overflow-hidden">
     <div class="carousel w-full flex justify-center">
       <div class="wrap flex transition-transform duration-500">
         <img *ngFor="let imagenx of images_colaboradores" [src]="imagenx"
           class="h-32 lg:h-40 object-cover rounded-xl flex-shrink-0 " alt="" />
       </div>
     </div>
-  </div>
+  </div></div>
 </section>
