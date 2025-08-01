@@ -18,8 +18,16 @@
     <div class="grid max-w-7xl mx-auto grid-cols-1 gap-y-5 gap-x-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       <!-- Producto 1 -->
       <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/king_norton.jpg"
+        #card
+        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+        w-full  bg-[url('/assets/producto/fondocar3.gif')]    bg-cover bg-center bg-no-repeat 
+        "
+          (mousemove)="onMouseMove($event, 0)"
+          (mouseleave)="onMouseLeave(0)"
+        >
+        <img 
+          #image
+          alt="Producto 1" src="/assets/producto/king_norton.png"
           class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
         <h3 class="text-lg font-bold text-gray-800">Ladrillo King Kong 18H <br>Norton</h3>
         <p class="mt-2 text-sm text-gray-600"> Fabricado con arcilla seleccionada, ofrece excelente durabilidad y acabado para construcciones sólidas y duraderas.</p>
@@ -27,8 +35,16 @@
 
       <!-- Producto 2 -->
       <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/king_lark.jpg"
+        #card
+        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+        w-full  bg-[url('/assets/producto/fondocar3.gif')]    bg-cover bg-center bg-no-repeat 
+        "
+          (mousemove)="onMouseMove($event, 1)"
+          (mouseleave)="onMouseLeave(1)"
+        >
+        <img 
+        #image
+        alt="Producto 1" src="/assets/producto/king_lark.png"
           class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
         <h3 class="text-lg font-bold text-gray-800">Ladrillo King Kong 18H <br>Lark</h3>
         <p class="mt-2 text-sm text-gray-600"> Ladrillo de alta resistencia, ideal para la construcción de muros portantes y estructuras de carga exigentes.</p>
@@ -36,8 +52,16 @@
 
       <!-- Producto 3 -->
       <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/king_taison.jpg"
+        #card
+        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+        w-full  bg-[url('/assets/producto/fondocar3.gif')]    bg-cover bg-center bg-no-repeat 
+        "
+        (mousemove)="onMouseMove($event, 2)"
+        (mouseleave)="onMouseLeave(2)"
+        >
+        <img 
+          #image
+          alt="Producto 1" src="/assets/producto/king_taison.png"
           class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
         <h3 class="text-lg font-bold text-gray-800">Ladrillo King Kong 18H <br>Taison</h3>
         <p class="mt-2 text-sm text-gray-600">Perfecto para edificaciones de varios niveles, con gran precisión dimensional y resistencia al impacto.</p>
@@ -45,8 +69,18 @@
 
       <!-- Producto 4 -->
       <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/king_galca.jpg"
+       #card
+        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+        w-full  bg-[url('/assets/producto/fondocar3.gif')]    bg-cover bg-center bg-no-repeat 
+        
+        "
+        (mousemove)="onMouseMove($event, 3)"
+        (mouseleave)="onMouseLeave(3)"
+        >
+
+        <img 
+        #image
+        alt="Producto 1" src="/assets/producto/king_galca.png"
           class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
         <h3 class="text-lg font-bold text-gray-800">Ladrillo King Kong 18H <br>Galca</h3>
         <p class="mt-2 text-sm text-gray-600">Perfecto para edificaciones de varios niveles, con gran precisión dimensional y resistencia al impacto.</p>
@@ -56,8 +90,16 @@
 
       <!-- Producto 5 -->
       <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/techo_lark.jpg"
+        #card
+        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+        w-full  bg-[url('/assets/producto/fondocar3.gif')]    bg-cover bg-center bg-no-repeat 
+        "
+        (mousemove)="onMouseMove($event, 4)"
+        (mouseleave)="onMouseLeave(4)"
+        >
+        <img 
+        #image
+        alt="Producto 1" src="/assets/producto/techo_lark.png"
           class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
         <h3 class="text-lg font-bold text-gray-800">Ladrillo Techo Lark</h3>
         <p class="mt-2 text-sm text-gray-600">  Ladrillo alveolar ligero, diseñado para aligerar losas con viguetas prefabricadas. Su estructura permite una mejor aislación térmica y acústica, reduciendo el peso total de la losa y mejorando el confort interior.</p>
@@ -65,8 +107,16 @@
 
 
         <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/techo_galca.jpg"
+        #card
+        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+        w-full  bg-[url('/assets/producto/fondocar3.gif')]    bg-cover bg-center bg-no-repeat 
+        "
+        (mousemove)="onMouseMove($event,5)"
+        (mouseleave)="onMouseLeave(5)"
+        >
+        <img 
+        #image
+        alt="Producto 1" src="/assets/producto/techo_galca.png"
           class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
         <h3 class="text-lg font-bold text-gray-800">Ladrillo Techo Galca</h3>
         <p class="mt-2 text-sm text-gray-600">  Ladrillo de techo macizo y resistente, ideal para sistemas de losa aligerada en edificaciones de mayor exigencia estructural. Ofrece buena capacidad portante y se adapta fácilmente a viguetas tradicionales o pretensadas.</p>
@@ -75,8 +125,16 @@
 
     <!-- Producto 6 -->
       <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/ladrillo4.jpg"
+        #card
+        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+        w-full  bg-[url('/assets/producto/fondocar3.gif')]    bg-cover bg-center bg-no-repeat 
+        "
+        (mousemove)="onMouseMove($event,6)"
+        (mouseleave)="onMouseLeave(6)"
+        >
+        <img 
+        #image
+        alt="Producto 1" src="/assets/producto/ladrillo4.png"
           class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
         <h3 class="text-lg font-bold text-gray-800">Ladrillo Pandereta -> (Larck, Taison, Norton, Galca)</h3>
         <p class="mt-2 text-sm text-gray-600">Ladrillo liviano y delgado, usado principalmente para muros divisorios no estructurales. Es económico, fácil de manejar y permite una construcción rápida en interiores y cerramientos.</p>
