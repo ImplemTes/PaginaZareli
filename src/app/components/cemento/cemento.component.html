@@ -1,11 +1,11 @@
 <section class="min-h-screen bg-white">
   <!-- Contenedor con la imagen de fondo y el texto -->
-  <div class="relative w-full h-24 md:h-32 lg:h-36  ">
+  <div class="relative w-full h-24 md:h-32 lg:h-40  ">
     <div class="image-container relative w-full h-full">
       <!-- Superposición y texto centrado -->
       <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
         <h1 class="text-white text-xl md:text-3xl lg:text-4xl font-bold shadow-text">
-          Fierro
+          Cemento
         </h1>
       </div>
     </div>
@@ -13,69 +13,129 @@
 
   <!-- Contenedor con el texto y las tarjetas de productos -->
 
-  <div class="mx-auto py-16 md:pl-10 md:pr-10  pl-8 pr-8 lg:pl-16 lg:pr-16 bg-white">
+  <div class="mx-auto py-16 md:pl-10 md:pr-10  pl-8 pr-8 lg:pl-16 lg:pr-16 bg-white  ">
     <!-- Contenedor de productos -->
     <div class="grid max-w-7xl mx-auto grid-cols-1 gap-y-5 gap-x-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       <!-- Producto 1 -->
-      <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/cemento.jpg"
-          class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
-        <h3 class="text-lg font-bold text-gray-800">Cemento Inka - Ultra Resistente</h3>
-        <p class="mt-2 text-sm text-gray-600">Cemento de alta calidad, ideal para construcciones que requieren gran
-          durabilidad y resistencia.</p>
-      </article>
+        <article
+          #card
+          class="group relative flex flex-col items-center text-center  to-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+          
+          
+          w-full  bg-[url('/assets/producto/fondocar2.gif')]    bg-cover bg-center bg-no-repeat 
+          
+          
+          "
+          (mousemove)="onMouseMove($event, 0)"
+          (mouseleave)="onMouseLeave(0)"
+        >
+          <img
+            #image
+            alt="Producto 1"
+            src="/assets/producto/cemento.png"
+            class="h-44 w-auto object-contain rounded-2xl mb-4"
+          />
+          <h3 class="text-lg font-bold text-white">Cemento Inka <br> Ultra Resistente</h3>
+          <p class="mt-2 text-sm text-white">
+            Cemento de alta resistencia para obras estructurales.  
+            Ideal para columnas, vigas y zonas de carga.  
+            Fraguado controlado que evita fisuras.  
+            Recomendado para estructuras exigentes.  
+          </p>
+        </article>
+
 
       <!-- Producto 2 -->
 
       <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/cemento2.jpg"
+          #card
+          class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+          w-full  bg-[url('/assets/producto/fondocar2.gif')]    bg-cover bg-center bg-no-repeat 
+          "
+            (mousemove)="onMouseMove($event, 1)"
+            (mouseleave)="onMouseLeave(1)"
+            
+        >
+        <img
+         #image
+         alt="Producto 2"
+          src="/assets/producto/cemento2.png"
           class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
-        <h3 class="text-lg font-bold text-gray-800">Cemento Inka - Anti Salitre</h3>
-        <p class="mt-2 text-sm text-gray-600">Cemento ideal para zonas húmedas o salinas, ya que protege las estructuras
-          del
-          salitre y la corrosión, asegurando mayor durabilidad. Ofrece alta resistencia y es perfecto para
-          cimentaciones,
-          muros y obras expuestas a ambientes agresivos.</p>
+        <h3 class="text-lg font-bold text-white">Cemento Inka <br> Anti Salitre</h3>
+        <p class="mt-2 text-sm text-white"> 
+          Protege estructuras en zonas húmedas y salinas.  
+          Reduce el riesgo de corrosión por salitre.  
+          Mejora la vida útil en climas agresivos.  
+          Ideal para cimentaciones y muros.   
+        </p>
       </article>
 
 
       <!-- Producto 3 -->
       <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/cemento3.jpg"
+            #card
+            class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+            w-full  bg-[url('/assets/producto/fondocar2.gif')]    bg-cover bg-center bg-no-repeat 
+            "
+            (mousemove)="onMouseMove($event, 2)"
+            (mouseleave)="onMouseLeave(2)"      
+        >
+        <img 
+          #image
+          alt="Producto 3" src="/assets/producto/cemento3.png"
           class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
-        <h3 class="text-lg font-bold text-gray-800">Cemento Inka - Portland Tipo I</h3>
-        <p class="mt-2 text-sm text-gray-600">Cemento de uso general, ideal para todo tipo de construcciones
-          convencionales
-          como viviendas, veredas y losas. Ofrece buen fraguado, resistencia confiable y excelente trabajabilidad en
-          obras
-          no expuestas a condiciones agresivas.</p>
+        <h3 class="text-lg font-bold text-white">Cemento Inka <br> Portland Tipo I</h3>
+        <p class="mt-2 text-sm text-white">
+          Cemento versátil para todo tipo de construcción.  
+          Buen fraguado y trabajabilidad asegurada.  
+          Perfecto para veredas, pisos y losas.  
+          Uso recomendado en obras convencionales. 
+        </p>
       </article>
 
       <!-- Producto 4 -->
 
-      <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/cemento4.jpg"
+        <article
+          #card
+          class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+          w-full  bg-[url('/assets/producto/fondocar2.gif')]    bg-cover bg-center bg-no-repeat 
+          "
+            (mousemove)="onMouseMove($event, 3)"
+            (mouseleave)="onMouseLeave(3)" 
+          >
+          <img 
+          #image
+          alt="Producto 4" src="/assets/producto/cemento4.png"
           class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
-        <h3 class="text-lg font-bold text-gray-800">Cemento Inka - Uso General</h3>
-        <p class="mt-2 text-sm text-gray-600">Cemento Portland Tipo GU, ideal para todo tipo de construcciones comunes
-          como
-          viviendas, veredas, pisos y obras no expuestas a condiciones agresivas.</p>
+        <h3 class="text-lg font-bold text-white">Cemento Inka <br> Uso General</h3>
+        <p class="mt-2 text-sm text-white">
+          Cemento GU para viviendas y estructuras comunes.  
+          Compatible con diversos métodos constructivos.  
+          Ofrece fraguado confiable y duradero.  
+          Apto para veredas, pisos y muros.  
+        </p>
       </article>
 
       <!-- Producto 5 -->
       <article
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-        <img alt="Producto 1" src="/assets/producto/cemento5.jpg"
+        #card
+        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
+        w-full  bg-[url('/assets/producto/fondocar2.gif')]    bg-cover bg-center bg-no-repeat 
+        "
+            (mousemove)="onMouseMove($event, 4)"
+            (mouseleave)="onMouseLeave(4)" 
+        >
+        <img 
+         #image
+        alt="Producto 5" src="/assets/producto/cemento5.png"
           class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
-        <h3 class="text-lg font-bold text-gray-800">Cemento Pacasmayo - Fortimax</h3>
-        <p class="mt-2 text-sm text-gray-600">Cemento hidráulico Tipo MS (Moderada Resistencia a los Sulfatos) y MH
-          (Moderado Calor de Hidratación), diseñado para ofrecer alta durabilidad en construcciones expuestas a
-          ambientes
-          agresivos, como zonas costeras o con suelos húmedo-salitrosos.</p>
+        <h3 class="text-lg font-bold text-white">Cemento Pacasmayo <br> Fortimax</h3>
+        <p class="mt-2 text-sm text-white">
+          Diseñado para ambientes agresivos y salinos.  
+          Alta resistencia a sulfatos y humedad.  
+          Ideal para zonas costeras y subterráneas.  
+          Cemento de alto desempeño técnico.  
+        </p>
       </article>
 
 
