@@ -1,15 +1,19 @@
 <section class="min-h-screen bg-white">
-  <!-- Contenedor con la imagen de fondo y el texto -->
-  <div class="relative w-full h-24 md:h-32 lg:h-40  ">
-    <div class="image-container relative w-full h-full">
-      <!-- Superposición y texto centrado -->
-      <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
-        <h1 class="text-white text-xl md:text-3xl lg:text-4xl font-bold shadow-text">
-          Cemento
-        </h1>
-      </div>
+<!-- Contenedor con imagen de fondo y texto centrado -->
+<div class="relative w-full h-24 md:h-28 lg:h-32 xl:h-56">
+  <div class="relative h-full w-full 
+              bg-[url('/assets/flota/cabecera.jpg')] 
+              bg-cover bg-center bg-no-repeat">
+              
+    <!-- Capa oscura y texto centrado -->
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
+      <h1 class="text-white text-xl md:text-3xl lg:text-4xl font-bold shadow-text">
+        Cemento
+      </h1>
     </div>
   </div>
+</div>
+
 
   <!-- Contenedor con el texto y las tarjetas de productos -->
 
@@ -19,12 +23,7 @@
       <!-- Producto 1 -->
         <article
           #card
-          class="group relative flex flex-col items-center text-center  to-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
-          
-          
-          w-full  bg-[url('/assets/producto/fondocar2.gif')]    bg-cover bg-center bg-no-repeat 
-          
-          
+          class="group relative flex flex-col items-center text-center  to-white shadow-md rounded-3xl pt-6 px-4 pb-4 hover:shadow-sm transition-shadow duration-300 h-full
           "
           (mousemove)="onMouseMove($event, 0)"
           (mouseleave)="onMouseLeave(0)"
@@ -33,10 +32,10 @@
             #image
             alt="Producto 1"
             src="/assets/producto/cemento.png"
-            class="h-44 w-auto object-contain rounded-2xl mb-4"
+            class="h-40 w-auto object-contain rounded-2xl mb-3"
           />
-          <h3 class="text-lg font-bold text-white">Cemento Inka <br> Ultra Resistente</h3>
-          <p class="mt-2 text-sm text-white">
+          <h3 class="text-lg font-bold text-gray-800">Cemento Inka <br> Ultra Resistente</h3>
+          <p class="mt-1 text-sm text-gray-800">
             Cemento de alta resistencia para obras estructurales.  
             Ideal para columnas, vigas y zonas de carga.  
             Fraguado controlado que evita fisuras.  
@@ -49,8 +48,7 @@
 
       <article
           #card
-          class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
-          w-full  bg-[url('/assets/producto/fondocar2.gif')]    bg-cover bg-center bg-no-repeat 
+          class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl  pt-6 px-6 pb-4 hover:shadow-lg transition-shadow duration-300 h-full
           "
             (mousemove)="onMouseMove($event, 1)"
             (mouseleave)="onMouseLeave(1)"
@@ -60,9 +58,9 @@
          #image
          alt="Producto 2"
           src="/assets/producto/cemento2.png"
-          class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
-        <h3 class="text-lg font-bold text-white">Cemento Inka <br> Anti Salitre</h3>
-        <p class="mt-2 text-sm text-white"> 
+          class="h-40 w-auto object-contain rounded-2xl mb-3 transition-transform duration-300 transform hover:scale-105" />
+        <h3 class="text-lg font-bold text-gray-800">Cemento Inka <br> Anti Salitre</h3>
+        <p class="mt-1 text-sm text-gray-800"> 
           Protege estructuras en zonas húmedas y salinas.  
           Reduce el riesgo de corrosión por salitre.  
           Mejora la vida útil en climas agresivos.  
@@ -74,8 +72,7 @@
       <!-- Producto 3 -->
       <article
             #card
-            class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
-            w-full  bg-[url('/assets/producto/fondocar2.gif')]    bg-cover bg-center bg-no-repeat 
+            class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl  pt-6 px-4 pb-4  hover:shadow-lg transition-shadow duration-300 h-full
             "
             (mousemove)="onMouseMove($event, 2)"
             (mouseleave)="onMouseLeave(2)"      
@@ -83,9 +80,9 @@
         <img 
           #image
           alt="Producto 3" src="/assets/producto/cemento3.png"
-          class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
-        <h3 class="text-lg font-bold text-white">Cemento Inka <br> Portland Tipo I</h3>
-        <p class="mt-2 text-sm text-white">
+          class="h-40 w-auto object-contain rounded-2xl mb-3 transition-transform duration-300 transform hover:scale-105" />
+        <h3 class="text-lg font-bold text-gray-800">Cemento Inka <br> Portland Tipo I</h3>
+        <p class="mt-1 text-sm text-gray-800">
           Cemento versátil para todo tipo de construcción.  
           Buen fraguado y trabajabilidad asegurada.  
           Perfecto para veredas, pisos y losas.  
@@ -97,8 +94,7 @@
 
         <article
           #card
-          class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
-          w-full  bg-[url('/assets/producto/fondocar2.gif')]    bg-cover bg-center bg-no-repeat 
+          class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl   pt-6 px-4 pb-4  hover:shadow-lg transition-shadow duration-300 h-full
           "
             (mousemove)="onMouseMove($event, 3)"
             (mouseleave)="onMouseLeave(3)" 
@@ -106,9 +102,9 @@
           <img 
           #image
           alt="Producto 4" src="/assets/producto/cemento4.png"
-          class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
-        <h3 class="text-lg font-bold text-white">Cemento Inka <br> Uso General</h3>
-        <p class="mt-2 text-sm text-white">
+          class="h-40 w-auto object-contain rounded-2xl mb-3 transition-transform duration-300 transform hover:scale-105" />
+        <h3 class="text-lg font-bold text-gray-800">Cemento Inka <br> Uso General</h3>
+        <p class="mt-1 text-sm text-gray-800">
           Cemento GU para viviendas y estructuras comunes.  
           Compatible con diversos métodos constructivos.  
           Ofrece fraguado confiable y duradero.  
@@ -116,11 +112,10 @@
         </p>
       </article>
 
-      <!-- Producto 5 -->
+      <!-- Producto 5           w-full  bg-[url('/assets/producto/fondocar2.png')]    bg-cover bg-center bg-no-repeat -->
       <article
         #card
-        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl p-6 hover:shadow-lg transition-shadow duration-300 h-full
-        w-full  bg-[url('/assets/producto/fondocar2.gif')]    bg-cover bg-center bg-no-repeat 
+        class="flex flex-col items-center text-center bg-white shadow-md rounded-3xl  pt-6 px-4 pb-4  hover:shadow-lg transition-shadow duration-300 h-full
         "
             (mousemove)="onMouseMove($event, 4)"
             (mouseleave)="onMouseLeave(4)" 
@@ -128,9 +123,9 @@
         <img 
          #image
         alt="Producto 5" src="/assets/producto/cemento5.png"
-          class="h-44 w-auto object-contain rounded-2xl mb-4 transition-transform duration-300 transform hover:scale-105" />
-        <h3 class="text-lg font-bold text-white">Cemento Pacasmayo <br> Fortimax</h3>
-        <p class="mt-2 text-sm text-white">
+          class="h-40 w-auto object-contain rounded-2xl mb-3 transition-transform duration-300 transform hover:scale-105" />
+        <h3 class="text-lg font-bold text-gray-800">Cemento Pacasmayo <br> Fortimax</h3>
+        <p class="mt-1 text-sm text-gray-800">
           Diseñado para ambientes agresivos y salinos.  
           Alta resistencia a sulfatos y humedad.  
           Ideal para zonas costeras y subterráneas.  

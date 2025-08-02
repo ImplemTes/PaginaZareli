@@ -8,6 +8,9 @@ import { FlotaComponent } from './components/flota/flota.component';
   import { CementoComponent } from './components/cemento/cemento.component';
   import { FierroComponent } from './components/fierro/fierro.component';
   import { LadrilloComponent } from './components/ladrillo/ladrillo.component';
+import { AlambreComponent } from './components/alambre/alambre.component';
+import { TecnoporComponent } from './components/tecnopor/tecnopor.component';
+import { ClavosComponent } from './components/clavos/clavos.component';
 
 
 const routes: Routes = [
@@ -20,6 +23,9 @@ const routes: Routes = [
   { path: 'home/producto/cemento', component: CementoComponent },  // Ruta para la página de flota
   { path: 'home/producto/fierro', component: FierroComponent },  // Ruta para la página de flota
   { path: 'home/producto/ladrillo', component: LadrilloComponent },  // Ruta para la página de flota
+  { path: 'home/producto/alambre', component: AlambreComponent },  // Ruta para la página de flota
+  { path: 'home/producto/tecnopor', component: TecnoporComponent },  // Ruta para la página de flota
+  { path: 'home/producto/clavos', component: ClavosComponent },  // Ruta para la página de flota
 
 ];
 
