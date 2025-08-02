@@ -67,7 +67,7 @@
       <!-- Botón del menú móvil -->
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <button type="button" (click)="toggleMenu()"
-          class="group relative inline-flex items-center justify-center rounded-lg p-3 text-gray-700 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+          class="group relative inline-flex items-center justify-center rounded-lg p-3 text-gray-700 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-600 hover:text-white focus:outline-none focus:ring-2  "
           aria-controls="mobile-menu" [attr.aria-expanded]="isMenuOpen.toString()">
           <span class="absolute -inset-0.5"></span>
           <span class="sr-only">Open main menu</span>
@@ -267,11 +267,11 @@
         <!-- Menú desplegable móvil mejorado -->
         <div class="bg-white rounded-xl shadow-sm border border-gray-100">
           <button (click)="toggleSubmenu()"
-            class="group w-full text-left flex items-center px-4 py-3 rounded-xl text-base font-semibold text-gray-800 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-600 hover:text-white transition-all duration-300">
-            <svg class="w-5 h-5 mr-3 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-            </svg>
-            Productos
+            class="group w-full text-left flex items-center px-4 py-3 rounded-xl text-base font-semibold text-gray-800 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-600 hover:text-white transition-all duration-300 transform hover:scale-105">
+ 
+
+           <img class="w-5 h-5 mr-2 rounded-md   group-hover:text-white   transition-colors duration-300 "  fill="currentColor"  viewBox="0 0 24 24" src="https://img.icons8.com/ios-filled/50/package.png" alt="construction-materials"/>
+               Nuestros Productos
             <svg [class.rotate-180]="isSubmenuOpen" 
                  class="ml-auto w-5 h-5 transform transition-all duration-300 group-hover:text-white" 
                  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -282,17 +282,43 @@
           <div *ngIf="isSubmenuOpen" 
                class="ml-6 mr-2 mb-3 space-y-1 border-l-2 border-red-200 pl-4 transition-all duration-300">
             <a [routerLink]="['/home/producto/cemento/']" (click)="closeMenu()"
-              class="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">• Cemento</a>
+              class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">
+              <img src="https://img.icons8.com/ios/50/cement-bag.png" alt="cement-bag"
+                class="w-5 h-5 rounded-md" />
+              Cemento
+            </a>
+
             <a [routerLink]="['/home/producto/fierro/']" (click)="closeMenu()"
-              class="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">• Fierro</a>
+              class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">
+              <img  src="https://img.icons8.com/quill/100/steel-i-beam.png" alt="steel-i-beam" 
+              class="w-5 h-5 rounded-md"/>
+              Fierro
+            </a>
+
             <a [routerLink]="['/home/producto/ladrillo/']" (click)="closeMenu()"
-              class="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">• Ladrillo</a>
-            <a [routerLink]="['/home/producto/tubo/']" (click)="closeMenu()"
-              class="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">• Tubo</a>
-            <a [routerLink]="['/home/producto/hierro/']" (click)="closeMenu()"
-              class="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">• Hierro</a>
-            <a [routerLink]="['/home/producto/cal/']" (click)="closeMenu()"
-              class="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">• Cal</a>
+              class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">
+              <img  src="https://img.icons8.com/ios/100/laying-bricks.png" alt="laying-bricks"
+              class="w-5 h-5 rounded-md"/>
+              Ladrillo
+            </a>
+              <a [routerLink]="['/home/producto/alambre/']" (click)="closeMenu()"
+                            class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">
+              <img  src="https://img.icons8.com/badges/48/barbed-wire.png" alt="barbed-wire"
+              class="w-5 h-5 rounded-md"/>
+              Alambre
+            </a>
+            <a [routerLink]="['/home/producto/clavos/']" (click)="closeMenu()"
+               class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">
+              <img  src="https://img.icons8.com/quill/100/nail.png" alt="nail"
+              class="w-5 h-5 rounded-md"/>
+              Clavos
+            </a>
+            <a [routerLink]="['/home/producto/tecnopor/']" (click)="closeMenu()"
+               class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:translate-x-1">
+              <img   src="https://img.icons8.com/ios/100/rectangle.png" alt="rectangle"
+              class="w-5 h-5 rounded-md"/>
+              Tecnopor
+            </a>
           </div>
         </div>
 
