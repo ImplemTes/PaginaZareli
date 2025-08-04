@@ -1,6 +1,6 @@
 
 export const environment = {
   production: true,
-  apiUrl: 'https://backend-zarel.onrender.com' 
+  apiUrl: 'https://backend-zarel-production.up.railway.app' 
 };
 

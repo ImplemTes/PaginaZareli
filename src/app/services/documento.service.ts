@@ -2,15 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { Documento } from '../models/documento';
 @Injectable({
   providedIn: 'root'
 })
-export class EmailService {
-  private apiUrl = environment.apiUrl + '/send-email';
+export class DocumentoService {
+  private apiUrl = environment.apiUrl + '/consuldoc';
 
   constructor(private http: HttpClient) {}
-  sendEmail(nombre: string, correo: string, descripcion: string): Observable<any> {
-    const payload = { nombre, correo, descripcion };
-    return this.http.post(this.apiUrl, payload);
+  sendInfo(data: any): Observable<Documento[]> {
+    return this.http.post<Documento[]>(this.apiUrl, data);
   }
 }
