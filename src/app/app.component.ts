@@ -10,7 +10,7 @@ export class AppComponent   {
   isMenuOpen = false;  
   isSubmenuOpen = false; 
   menuVisible: boolean = false;
-
+   email = 'serviciosggyz@hotmail.com';
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
